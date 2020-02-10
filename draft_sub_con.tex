@@ -1,0 +1,435 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+\documentclass[12pt]{article}
+\usepackage[round, sort , authoryear]{natbib}
+
+
+%required by R
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage[normalem]{ulem}
+\usepackage[normalem]{ulem}
+\usepackage[utf8]{inputenc}
+\usepackage{makecell}
+\usepackage{xcolor}
+\usepackage{dcolumn}
+\usepackage{mathtools}% http://ctan.org/pkg/mathtools
+
+
+%Fort title position
+\usepackage{titling}
+
+%For new line in table
+\usepackage{array}
+\usepackage{makecell}
+
+\renewcommand\theadalign{bc}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+
+%New environments
+\newtheorem{lemma}{Lemma}
+\newtheorem{assumption}{Assumption}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newenvironment{proof}[1][Proof]{\noindent \textbf{#1.} }{\  \rule{0.5em}{0.5em}}
+
+%For tables position
+\usepackage{float}
+\restylefloat{table}
+
+%%% PAGE DIMENSIONS
+\usepackage[margin=2.5 cm]{geometry}
+\usepackage{blindtext} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage[utf8]{inputenc} 
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{epstopdf}
+\usepackage[hang]{footmisc}
+\usepackage{lipsum}
+\usepackage{setspace}
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.13}
+\usepackage{caption}
+\usepackage{threeparttablex}
+\usepackage{color, colortbl}
+\definecolor{Gray}{gray}{0.9}
+%%% PACKAGES
+\usepackage{placeins}
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+% These packages are all incorporated in the memoir class to one degree or another...
+\usepackage{amsmath}
+\numberwithin{table}{section}
+\usepackage{cases}
+\usepackage{graphicx}
+%
+\usepackage{float}
+\usepackage{authblk}
+\usepackage{pgfplots}
+\usepackage{pdfpages}
+\linespread{1.5}
+\setlength{\footnotemargin}{4mm}
+\usepackage{amssymb} 
+\usepackage{tabularx}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\addtolength{\footnotesep}{2mm} % change to 1mm
+
+%For Counting Figures in the Appendix
+\usepackage{chngcntr}
+
+%For subtables
+\usepackage{subcaption}
+
+%For having the catption above tables
+\usepackage{float}
+\floatstyle{plaintop}
+\restylefloat{table}
+
+%Math stuff
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=BibTeX}
+%TCIDATA{LastRevised=Monday, August 27, 2018 20:06:51}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\restylefloat{table}
+\oddsidemargin  +0.18in
+\evensidemargin +0.18in
+\topmargin 40pt \textheight 8.1in \textwidth 6.5in
+\linespread{1.5}\parskip .05in
+
+
+
+
+
+
+%Nice Figure and table headers
+\captionsetup[figure]{labelfont={sc},name={Figure},labelsep=period}
+%\captionsetup[table]{labelfont={sc},name={Table},labelsep=period,justification=centering}
+
+\usepackage{booktabs}   % for nice tables
+\usepackage[colorlinks=false, linktocpage=true]{hyperref}
+%\usepackage[flushmargin]{footmisc}
+%\addtolength{\footnotesep}{3mm} % change to 1mm
+\hypersetup{
+	colorlinks,
+	linkcolor={blue!50!black},
+	citecolor={blue!50!black},
+	urlcolor={blue!80!black}
+}
+% use for hypertext
+\usepackage[colorinlistoftodos]{todonotes}
+\setlength{\marginparwidth}{2cm}
+\newenvironment{customlegend}[1][]{%
+	\begingroup
+	% inits/clears the lists (which might be populated from previous
+	% axes):
+	\pgfplots@init@cleared@structures
+	\pgfplotsset{#1}%
+}{%
+	% draws the legend:
+	\pgfplots@createlegend
+	\endgroup
+}%
+%For Figures, below
+
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepgflibrary{arrows} % LATEX and plain TEX and pure pgf
+\usepgflibrary[arrows] % ConTEXt and pure pgf
+\usetikzlibrary{arrows} % LATEX and plain TEX when using Tik Z
+\usetikzlibrary[arrows] % ConTEXt when using Tik Z
+\usepackage{hyperref}
+
+
+
+%%% The "real" document content comes below...
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\parskip3mm\parindent0cm
+\setlength{\droptitle}{-10em}   % This is your set screw
+
+\title{Unilateral Divorce and the Rise of Informal Cohabitation	\thanks{The authors wishe to thank Matthias Doepke, Alessandra Voena and the Norhtwestern Macro group for their useful comments. Blasutto acknowledges financial support from the French speaking community of Belgium (ARC project 15/19-063 on "family transformations").}}
+\author{Fabio Blasutto$^1$ \quad Egor Kozlov$^2$}
+
+\begin{document}
+	 	\tikzstyle{block} = [draw, fill=white, rectangle, 
+	minimum height=3em, minimum width=6em]
+	\tikzstyle{sum} = [draw, fill=white, circle, node distance=1cm]
+	\tikzstyle{input} = [coordinate]
+	\tikzstyle{output} = [coordinate]
+	\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+	
+	
+	%Gauss distribution
+	\pgfmathdeclarefunction{gauss}{2}{%
+		\pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+	}
+	% Bibliography style, important for biblatex functioning	
+	\bibliographystyle{apa}
+	
+	\maketitle
+
+	\footnotetext[1]{IRES, UCLouvain \& National Fund for Scientific Research (Belgium). Email:  \tt{fabio.blasutto@uclouvain.be}}
+	\footnotetext[2]{Northwestern Univrsity. Email:  \tt{egorkozlov2020@u.northwestern.edu}.\\}
+	
+\begin{abstract}
+	Does unilateral divorce eroded the gains of marrying with respect to cohabiting? Exploiting the staggered introduction of unilateral divorce across U.S. states, we show that newly formed relationships after the reform are more likely to be cohabitations instead of marriages, and that cohabitation spells last longer. To understand the mechanisms underlying the law changes, we build and estimate a structural life cycle model with partnership choice, where the gains from marriage with respect to cohabitation comes from a better cooperation within the household, enforced through a costly divorce, which acts as a commitment technology. Unilateral divorces increases the risk of separation, making cohabitation preferred to couples that would have had the highest risk of divorce. Since the couples switching relationship are on average better matched than the average cohabitants, the average length of cohabitations increases.
+\end{abstract}
+\textbf{Keywords}: Marriage, Cohabitation, Unilateral Divorce, Structural Estimation\\
+\textbf{JEL-Code}: D83 - J12
+%\clearpage
+%\noindent \medskip{}
+\section{Introduction}
+Why do people marry? According to the seminal work of \citet{becker1981}, people marry both for non-economic (i.e. love and companionship) and economic reasons, among which the sharing of public goods, the division of labor to exploit comparative advantages, as in \cite{chiappori1997}, and risk pooling, as \cite{voena2015} and \cite{rigas2015}, points out.
+All these reasons are able to explain why couples decide to live together, but they are silent about the choice between different types of partnership contracts, such as marriage and informal cohabitation. Economic incentives might an important determinant of this choice, but also because married and cohabiting couples display a different economics behavior. For example, female labor supply is higher for cohabiting couples, while married couples are wealthier, as \cite{gemici2014} and \cite{lafortune2019} respectively point out. Moreover, cohabitation display a much higher separation rate than marriages, which might be a cause of the high share of single mothers living in the US nowadays, which is the single strongest predictor for upward mobility\footnote{While the share of single mothers is the strongest predictor of differences in upward mobility across counties on top of segregation, residential segregation, income inequality, social capital, school quality, and racial shares, \cite{chetty2018} points out that half of this effect is due to self selection.} according to \cite{chetty2018}. A striking fact about cohabitation is its fast rise in the recent decades: according to \cite{manning2013} the share of women that ever cohabited moved from 33\% in 1987 to 60\% in 2010. Why did this happen? 
+
+In this paper we address this question, focusing on the role of the unilateral divorce on the share of people that decides to cohabit. Our main contribution is to show the rate of cohabitation increased after the changes in US law and that the underlying mechanism is that the increased risk of divorce makes marriage less attractive, and as a consequence cohabitation becomes the preferred choice to couples that would have experienced the highest risk of divorce.
+
+We first use data from the National Survey of Family and the Household and of the National Survey of Family growth to build a sample of first and second relationships\footnote{A relationship is defined as an interruption of the state of singleness, which can either be marriage or cohabitation.}. Then, exploiting the exogenous variation coming from the staggered introduction of unilateral divorce over time across US states, we show that cohabitation becomes 5\% more likely  to be chosen as result of the reform. Interestingly,  the effect is heterogeneous across property rights regimes within marriage, being insignificant in title based states and the strongest in community property states. This result suggest that the idea that the surplus of marriage comes from commitment, enforced through the equal division of assets\footnote{This mechanism is highlighted by \cite{lafortune2019}, where the equal division of assets within marriage makes possible to efficiently invest in children even after the rise of unilateral divorce.}, cannot be the only reason why some people started cohabiting instead. Moreover, we analyze how unilateral divorced affected the length of newly formed cohabitation spells, showing that they last longer both because of a reduced risk of marriage and of separation.
+To understand the mechanisms that lead to these changes we build a dynamic model of intra household decision making, where cohabitation and marriage differs in the cost of separation and divorce as well as in law that govern the property rights upon divorce, which can vary for marriage while it is always title based for cohabitation. Moreover, separation can always be initiated unilaterally, as opposed to divorce, that would need the consensus of both partner under a mutual divorce regime. Individuals are initially single, and with some probability in each period they meet a potential partner, which they can decide to marry or start cohabiting with. Couples make decisions about consumption, savings and female labor supply and they are subject to idiosyncratic income shocks.  We model the decision making in the couple building on the literature of limited commitment (see for example \cite{kk1996},  \cite{ligon2002}, \cite{marcet2019} and \cite{pavoni2018}), which has been applied to dynamic collective models in the household by \cite{voena2015}, \cite{mazzocco2007}, \cite{foerster2019} and \cite{lise2018} among others. Couples also receive time varying match quality shocks, which might drive the couple to change their partnership status (i.e. from cohabitation to marriage) or to separate. When one member of the couple wishes to split, the bargaining powers are rebargained such that the binding member is made indifferent between separation and staying in a couple\footnote{For particularly bad draws in the match quality or productivity shock this might not be possible and hence the couple would split.}. The gains of marriage with respect to cohabitation derive from a better risk sharing and a more efficient specialization in the production of a public good\footnote{We assume that a public good is produced with money an female time. When females stop working for producing such good their potential productivity in the labor market decreases.}, which arise from a better commitment within the couple, enforced by the treat of a costly divorce, which acts as a commitment device. On the other hand, couples that would face a high risk of divorce if married (i.e. because of a low match quality draw) are more likely to choose cohabitation instead, since it implies a lower cost of separation while allowing to enjoy the gains from being in a couple. In the model, a switch from mutual consent to unilateral divorce causes couples to start cohabiting more, since the higher risk of divorce makes the expected value of divorce with respect to cohabitation lower. The effect would be particularly pronounced under community property division of assets upon divorce, since the richest part of the couple  would risk to lose most of its wealth. This mechanism implies that couples that would have previously married now start cohabiting: since those have on average a higher match quality than cohabiting couples, this selection drives down the risk of separation for cohabiting couples, as observed in the data.
+
+We then estimate the model using the simulated method of moments, using as targets an array of moments regarding the mating market and the differential female labor supply for cohabiting and married couples. We find that the model is able to reproduce the results from our empirical evidence, thus validating our mechanism. We run a series of counterfactual experiments that shrinks the gender wage gap and the relative price of public versus public goods, which tell us the importance of this factors in explaining the rise in cohabitation over time.
+
+This contribution of this paper is threefold. First, we are the first to document and explain how divorce laws affected the choice between marriage and cohabitation. This contribution adds to the existing literature that documented the effects of divorce laws on the rate of divorce (\cite{friedberg1998}, \cite{wolfers2006}), female labor supply (\cite{stevenson2008}, \cite{voena2015}), savings (\cite{voena2015}), assortative mating \cite{reynoso2019} and prostitution (\cite{ciacci2017}) among the others. As in \cite{reynoso2019}, we study not only the effect of unilateral divorce on married couples, but also on sorting. While her focus is on who marries whom and concludes that unilateral divorced raised the share of singles, we abstract from modeling the mating market and we focus on partnership choice, which allow us to conclude that the rate of singleness declined less than previously thought, since some people that were believed not to be in a couple were actually cohabiting. Our paper build on \cite{voena2015}, that studies how unilateral divorce interacted with property rights upon divorce affected household behavior of married couples. We extend her work both considering cohabitation as an alternative relationship and in analyzing the effects of these laws on sorting.
+Second, our paper expands the literature on cohabitation, showing how the risk of splitting and its interaction with divorce laws is essential for understanding partnership choices. Different papers in the literature highlighted various gains of marriage with respect cohabitation: commitment (\cite{matouschek2008}), labor specialization within the couple \cite{gemici2014}, learning about match quality \cite{brien2006}, the interaction between commitment and learning \cite{blasutto2020} and  investment in children \cite{lafortune2019}. A paper close to ours is \cite{lafortune2019} who highlights the role of assets as a collateral that enforces commitment and hence allows for optimal investment in children. In their model, a switch from mutual consent to unilateral divorce causes people without wealth to start cohabiting because they are left without a commitment technology. While we think that thei mechinsim is important, it cannot be the whole story since we observe that the switch toward cohabitation was the weakest in title based state, while their model would predict the opposite. In this paper we will quanity how much of the shift is due to this mechanism versus the role of the increased risk of divorce. We extend the work of \cite{gemici2014} and \cite{blasutto2020}, who develop collective dynamic models with limited commitment, introducing saving decisions, which are shown to play an important for commitment and hence for partnership choice, especially when interacted with propoerty rights upon divorce.\\
+Third, our paper speaks to the literature studying the canges of the family in recent decades. Recent works have investigated various channels through which the structure of families might have changed over time. \cite{albanesi2009} show the role of imporved maternal health on the rise of female labor force participation, \cite{greenwood2016} instead study the role that technology and the wage structure played in the rise in assortative mating, female labor force participation, the share of divorced and the increas in married people. Our paper extends this work, studying the effect of wage structure, gender wage gap and changes in the home production technology on the rise of cohabitation. Through a series of counterfactual experiments we are able to inspected which were the main forces behind the rise in cohabitation. Intuitively, as wages grow and the price of home appliances decreases, household can buy on the the market goods that were once produced at home. Since one of the gain of marriage with respect to cohabitation lies in the better specialization of production within the household, we might expect that those forces imply a reduction in the share of couples choosing marriage over cohabitation.
+
+The paper is organized as follows: section 2 offers an overview of US divorce laws, section 3 presents the empirical results, while section 4 describes in detail the theoretical model. Section 5 explain the procedure used for the estimation as well as the results. Section 6 report the results from a series of counter-factual experiments , while section 7 performs a welfare analysis. Section 8 draws the conclusions of the paper.
+
+\section{US Divorce Laws: an Overview}
+\section{Data and Empirical Evidence}
+\subsection{The Dataset}
+\subsection{Empirical Evidence}
+\section{The Model}
+This section describes a dynamic life cycle structural model of partnership formation, savings, female labor supply and  home prduction. Couples act cooperatively subject to limited commitment, which means that rebargaining might happen in response of changes in the outside options, which are assumed to be divorce or separation.
+
+In the model time is discrete, and in each period men and women draw their productivities. If single, with some probability they meet a potential partner that comes with a couple specific match quality shock, and they decide whether to marry, cohabit or to stay single. If they are in a couples, they observe a realization of the match quality shock as well as of their productivity, and according to those they decide whether to stay together or to split. Both singles and couples make consumption and savings decisions, using their money for private or public good expenditure. Couples also make female labor supply decisions\footnote{We assume that single females and all men work full time.} and female time can be used to produce the public good, but this comes at the cost of a loss in productivity. The gains of being in a couple comes from love, risk sharing and labor market specialization. Instead, the gains of marriage with respect to cohabitation comes from a more functioning risk sharing and a better specialization in time use, which derives from the high cost of divorce serving as a commitment device. These gains of marriage deteriorates when the love shock is low enough to cause a high risk of divorce and frequent renegotiations: in this case cohabitation might be the better option, since we assume that the cost of separation will be lower than the cost of marriage.
+	   		\begin{figure}[H]\centering
+	\begin{tikzpicture}[domain=0:1,scale=4]
+	\node [block, name=input,align=center] (sum) {Single\\ 7348};
+	\node [block, above right of=sum, node distance=6cm] (controller) {Separation};
+	\node [block, below right of=controller,
+	node distance=6cm,align=center] (system) {Cohabitation \\ 5308};
+	\draw [<-,  thick, latex-] (controller) -| node[below left]{47,8\%}(system);
+	\node [output, right of=system] (output) {fe};
+	\node [block, below left of=system,  node distance=6cm,align=center] (measurements) {Marriage \\ 2814};
+	\node [block, left of=measurements, node distance=4.2cm,align=left] (divorce) {Divorce};
+	\draw [<-,  thick, latex-] (sum) |- node[below right]{100\%} (controller);
+	\draw [->,  thick, -latex] (sum) -- node[above]{72,4\%} (system);
+	\draw [->,  thick, -latex] (system) |-node[above left]{33,8\%} (measurements);
+	\draw [->,  thick, -latex] (measurements) --node[above]{23,5\%} (divorce);
+	\draw [->,  thick, -latex] (sum) --node[above right]{12,9\%} (measurements);
+	\draw [->,  thick, -latex] (divorce) --node[right]{100\%} (sum);
+	node [near end] {$$} (sum);
+	\end{tikzpicture}
+	\label{fig:scheme}
+	\caption*{\footnotesize \textsc{Notes}: Number of spells and transitions as arising from the data in our sample.}
+	\caption{}
+	\end{figure}
+\subsection{Preferences}
+Women $f$ and men $m$ derive utility consuming a private good  $c$ and a household public good $Q$. The public good can be interpreted in terms of both the quantity and quality of children, as well as the goods and services produced within the household, as washing clothes  or home cooked meals. Preferences are separable in the two goods and across time.
+Agents derives utility from a couple specific love shock $\psi$ which evolves over time and it can be interpreted as  can be interpreted as the value of love and companionship in a couples. The intra period utility of a single agent $s\in(f,m)$ is:
+\[u(c^s_t,Q^s_t)=\frac{{c^s_t}^{1-\sigma}}{1-\sigma}+\alpha\frac{{Q^s_t}^{1-\xi}}{1-\xi},\]
+where the superscript $s$ on $Q$ accounts for the fact that there is no partner to share the public good. Instead, the utility for  agent $s\in(f,m)$ in a couple is:
+\[u^{C}(c^s_t,Q_t)=\frac{{c_t^s}^{1-\sigma}}{1-\sigma}+\alpha\frac{Q_t^{1-\xi}}{1-\xi}+\psi_t,\]
+where the match quality evolves over time according to the following law of motion:
+\[\psi_t=\psi_{t-1}+\epsilon_t,\text{ where }\epsilon_t \sim\mathcal{N}(0,\sigma^2_{\psi})\text{ and }\epsilon_1\sim\mathcal{N}(0,\sigma_{\psi,1}^{2}). \]
+\subsection{Home Production}
+In our model each agent in embodied with one unit of time. While singles and married men are assumed to supply inelastically one unit of market labor, females in a couple can be out of the labor force to devote their time producing the home good $Q$. The public good can be produced buying $d$ goods in the market. Following \cite{greenwood2016} we define the production function of home good as:
+\begin{equation}\label{eq:pfunction}
+Q_t=[d_t^\lambda+\kappa {(1-P^f_t)}^\lambda]^{\frac{1}{\lambda}}, \text{ where }0<\lambda<1.
+\end{equation}
+The parameter $\lambda$ captures the degree of  substitutability between female time and the use of durables in the production of the home good. This structure implies that when the relative price of durables decreases and when wages goes up, households will use less female time for its production, and hence female employment will increase. The variable  $P^f_t$ is a dummy variable that that takes value $1$ when the women is participating in the labor market.
+
+\subsection{Wages}
+The labor income for agents $s\in\{f,m\}$ depends on their age $t$ and on a permanent income component $z^s_t$:
+\[\ln(w^s_t)=f^s(t)+z^s_t,\]
+where $f^s()$ is a gender specific function that captures the evolution of productivity over age. The permanent income component  $z^s_t$ evolves over time as:
+\begin{equation}\label{eq:pcomp}
+z^s_t=z^s_{t-1}-(1-P_t^s) \mu+\zeta^s_{t}\text{, where }\zeta^s_{t}\sim^{iid}\mathcal{N}(0,\sigma^\zeta)\text{, and }\zeta^s_{1}=z^s_{1}.
+\end{equation}
+Note that $\mu$ is the loss in productivity that affects women\footnote{As we anticipated men always participate in the labor market, hence $P^m_t=1$ $\forall$ $t$.} that are not participating in the labor market. It can be be interpreted as a reduced form way of capturing both the missed opportunity to accumulate human capital while working as wells as the skill atrophy deriving from interruptions, a phenomenon described by \cite{adda2017}. Modeling the loss in productivity for not working is an important feature of our model as it creates an incentive to join the labor force for women that expect to divorce or separate soon. 
+\subsection{Budget Constraints}
+The budget constraint of single agents  $s\in\{f,m\}$ is:
+\begin{equation}\label{eq:bcs}
+a^s_{t+1}=R a^s_t+w^s_t-c^s_t-d^s_t, \text{ with }a^s_{t+1}\geq0,
+\end{equation}
+where $a^s$ are agent's savings, $w^s$ is the wage and $c^s$ and $d^s$ are consumption in the private good and the expenditure used to produce the public good.
+The budget constraint for a couple instead is:
+\begin{equation}\label{eq:bcm}
+a_{t+1}=R a_t+w^m_t+P^f_t w^f_t-c^f_t-c^m_t-d_t, \text{ with }a_{t+1}\geq0,
+\end{equation}
+where $P^F_t$ is a dummy of female labor force participation.
+When a couple divorces in $t$, we assume 
+\[a^m_t+a^f_t=\delta a_t,\]
+where $\delta$ is the fraction of total assets $a_t$ left\footnote{The assumption that divorce erodes a fracction of wealth is common to \cite{cubeddu2003}.} after divorce. Separation instead comes with no monetary costs\footnote{In reality the monetary cost of separation is likely to be positive. We assumed it to be zero because of the difficulties that arises when it comes to identify it. In fact, the gap in divorce and separation cost is what is actually needed to match the data.}.
+An important feature of our model is the role of property rights upon divorce, which define how assets are divided. We distinguish three cases which define the share of assets $\chi$ going to the women:
+\begin{enumerate}
+\item \textit{Community Property}. Assets are split exactly in half: $\chi=0.5$
+\item \textit{Equitable Distribution}. $\chi\sim\mathcal{U}(1/3,2/3)$.[WHAT I WISH WE HAD]
+\item \textit{Title Based Regime}. $\chi$ is proportional to the productivity of the women compared to the one of the men, formally
+\[\chi=\frac{\exp{z^f}}{\exp{z^f}+\exp{z^m}}.\]
+\end{enumerate}
+It is worth noting that we depart from \cite{voena2015} in the way title based regime is modeled: she assumes that assets are split following a couple decision, while for us the sharing rule depends only on $z^F$ and $z^M$. Since in our model relative productivities are the only source of disagreement,if we took the modeling assumption of \cite{voena2015} we would still get that the sharing rule is mainly determined by productivities\footnote{If we had individual specific love shocks, our reduced from modeling assumption would give different results instead.}. Moreover, making the sharing rule endogenous would give cohabitation a strong advantage with respect to a community property or equitable distribution marriage\footnote{This would happen because separation would have more degrees of freedom that divorce, where it is the court that decides the sharing rule.}, which makes hard to match the data.  
+
+\subsection{Problems of the Single}
+We start by by describing the problem for a single agent $i\in\{f,m\}$ in $t$. The agent have to make consumption and saving decisions, and she is also determining the share of expenditures going to durables $d^i_t$. In $t+1$ she meets a potential partner $j$ of the opposite sex with probability $\lambda_{t+1}$ and she can decide to enter a partnership, which also depend on whether the potential partner will agree. If the two decides to marry, the variable $Ma_{t+1}$ will take value 1, while $CO_{t+1}=1$ if the couple decides to cohabit. Otherwise, $Ma_{t+1}$ and $CO_{t+1}$ will be equal to 0.  Note we assume singles to always participate in the labor market. The state variable of a single then is $\omega^i_t=\{a^i_t,z^i_t\}$, while her choices are represented by the vector $\mathbf{q}^i_t=\{a^i_{t+1},c^i_t,d^i_t\}$. We denote by $V_t^{i,S}(\Omega^i_t)$ the value function of agent $s$, which we define as
+\begin{equation}\label{eq:v_single}
+\begin{split}
+V_t^{iS}(\omega^i_t)=&\max_{\mathbf{q}^i_t} u(c^i_t,Q^i_t)+\beta E_t \bigg\{(1-\lambda_t)V^{iS}_{t+1}(\omega^i_{t+1})+\\ & \quad\quad \lambda_t\big\{(1-Ma_{t+1})(1-CO_{t+1})	V^{i,S}_{t+1}(\omega_{t+1})+\\ &\quad\quad\quad\quad M_{t+1} V^{i,M}_{t+1}(\Omega_{t+1})+ CO_{t+1} V^{i,C}_{t+1}(\Omega_{t+1}) \big\}\bigg\},
+\\ &\text{s.t. \eqref{eq:bcs} and \eqref{eq:pfunction}.} 
+\end{split}
+\end{equation}
+
+
+\subsection{Household Planning Problem}
+The problem of the couple depends both on the type of relationship, cohabitation or marriage, and on the divorce regime, which can be either \textit{mutual consent} or \textit{unilateral}. Separation is always unilateral. Under the unilateral regime, one partner can initiate the separation/divorce process alone, while under mutual consent the agreement of both is needed.
+\subsubsection*{Mutual Consent Regime}
+Under mutual consent marriage $\hat{M}$, couples solve a pareto problem where the pareto weight\footnote{Refer to \autoref{ssec:marriage_market} for a description about how pareto weight are initially set.} of the wife is $\theta^f$, while the one of the husband is $1-\theta^f$. The state vector is $\Omega^{\hat{M}}_t=\{a_t,z^f_t,z^m_t,\psi_t,\theta^f\}$, while the variables over which the couple maximize are summarized by the vector $\mathbf{q}^M_t=\{a_{t+1},d_{t},c^m_{t},c^f_{t},P^f_t,D_t\}$, where $D_t$ is a dummy variable that takes value $1$ is divorce happens and $0$ otherwise. The formal probelm that a couple married is $t$ solve is:
+\begin{equation}\label{eq:v_mutual}
+\begin{split}
+V_t^{\hat{M}}(\Omega^{\hat{M}}_t)=&\max_{\mathbf{q}^M_t} (1-D_t)\{\theta^f u(c^f_t,Q_t)+(1-\theta^f)u(c^m_t,Q_t)+\psi_t+\beta E_t V^{\hat{M}}_{t+1}(\Omega^{\hat{M}}_{t+1})\}\\ &\quad\quad+D_t \{\theta^fV^{fS}_{t}(\omega^{f}_{t+1})+\theta^m  V^{mS}_{t}(\omega^{m}_{t}))\}
+\\ &\text{if $D_t=0$:}\hspace{35pt}\text{s.t. \eqref{eq:bcm} and \eqref{eq:pfunction}
+}
+\\ &\text{if $D_t=1$:}\hspace{35pt}\text{s.t. \eqref{eq:bcs}, \eqref{eq:pfunction} for $i\in\{f,m\}$,}\\ &
+\hspace{80pt}a_t^m+a_t^f=\delta a_t,	\\ &
+\hspace{80pt}a_t^m,a_t^f\text{ determined according to property right regime,}	\\ &\hspace{80pt}
+V_{t}^{fS}(\omega^F_{t})> W^{f\hat{M}}_{t}(\Omega^{\hat{M}}_{t}),\\ &\hspace{80pt}
+V_{t+1}^{mS}(\omega^M_{t})> W^{m\hat{M}}_{t}(\Omega^{\hat{M}}_{t}).
+\end{split}
+\end{equation}
+$W_{t}^{i\hat{M}}$ for $i\in\{F,M\}$ is defined as 
+\begin{equation}
+W_{t}^{i\hat{M}}=u(\tilde{c}_t^{i},\tilde{Q}_t^{i})+\psi_t+\beta E_t V_{t}^{i\hat{M}}(\Omega^{\hat{M}}_{t+1}),
+\end{equation}
+where $\mathbf{\tilde{q}}^{\hat{M}}_t=\{\tilde{a}_{t+1},\tilde{d}_{t},\tilde{c}^{m}_{t},\tilde{c}^{f}_{t},\tilde{P}^{f}_t\}$ is the $\argmax$ of problem \eqref{eq:v_mutual} conditionally on having chosen $D_t=0$. $V_{t+1}^{i\hat{M}}(\Omega^{\hat{M}}_{t+1})$ instead can be obtained by the expectation of the sum of the time utilities that the agent get from $t+1$ to $T$, where the variables entering the utility function derive derive from the the pareto problem if the agent is in a relationship, otherwise they are the solution of \eqref{eq:v_single}.
+\subsubsection*{Unilateral Divorce Regime}
+Under the unilateral divorce regime, denoted by $\overline{M}$, couple solve a pareto problem where the pareto weight of the wife is $\theta^f_t$ and the one of the husband is $\theta^m_t$.The state vector is $\Omega^{\overline{M}}_t=\{a_t,z^f_t,z^m_t,\psi_t,\theta^f_t,\theta^m_t\}$, while the variables over which the couple maximize are summarized by the vector $\mathbf{q}^M_t$. The formal probelm that a couple married is $t$ solve is:
+\begin{equation}\label{eq:v_uni}
+\begin{split}
+V_t^{\overline{M}}(\Omega^{\overline{M}}_t)=&\max_{\mathbf{q}^M_t} (1-D_t)\{\theta^f_{t+1} u(c^f_t,Q_t)+\theta^m_{t+1} u(c^m_t,Q_t)+\psi_t+\beta E_t V^{\overline{M}}_{t+1}(\Omega^{\overline{M}}_{t+1})\}\\ &\quad\quad+D_t \{\theta^f_{t}V^{fS}_{t}(\omega^{f}_{t+1})+\theta^m_{t} V^{mS}_{t}(\omega^{m}_{t}))\}
+\\ &\text{if $D_t=0$:}\hspace{35pt}\text{s.t. \eqref{eq:bcm} and \eqref{eq:pfunction},}\\ &\hspace{80pt}
+\theta^f_{t+1}=\theta^f_{t}+\mu^f_t,\\ &\hspace{80pt}
+\theta^m_{t+1}=\theta^m_{t}+\mu^m_t,
+\\ &\text{if $D_t=1$:}\hspace{35pt}\text{s.t. \eqref{eq:bcs}, \eqref{eq:pfunction} for $i\in\{f,m\}$,}\\ &
+\hspace{80pt}a_t^m+a_t^f=\delta a_t,	\\ &
+\hspace{80pt}a_t^m,a_t^f\text{ determined according to property right regime},
+\end{split}
+\end{equation}
+where $\theta^f_{t+1}$ and $\theta^m_{t+1}$ adjust such that the following participation constraints are satisfied:
+\begin{equation}\label{eq:p_cons_mar}
+\begin{split}
+&
+W^{f\overline{M}}_{t}(\Omega^{\overline{M}}_{t})\geq V_{t}^{fS}(\omega^f_{t}),\\ &
+W^{m\overline{M}}_{t}(\Omega^{\overline{M}}_{t})\geq V_{t}^{mS}(\omega^m_{t}). 
+\end{split}
+\end{equation}
+Note that $\mu^i_t$ are the langrange multipliers associated with spouses' participation constraints.
+
+$W_{t}^{i\overline{M}}$ for $i\in\{f,m\}$ is defined as 
+\begin{equation}
+W_{t}^{i\overline{M}}=u^M(\tilde{c}_t^{i},\tilde{Q}_t^{i})+\beta E_t V_{t+1}^{i\overline{M}}(\Omega^{\overline{M}}_{t+1}),
+\end{equation}
+\subsubsection*{Cohabitation}
+Under cohabitation, denoted by $C$, couple solve a pareto problem where the pareto weight of the wife is $\theta^f_t$ and the one of the husband is $\theta^m_t$.The state vector is $\Omega^{C}_t=\{a_t,z^f_t,z^m_t,\psi_t,\theta^f_t,\theta^m_t\}$, while the variables over which the couple maximize are summarized by the vector $\mathbf{q}^C_t=\{a_{t+1},d_t,c^m_t,c^f_t,P^f_t,S_t,MA_t\}$. $S_t$ and ${MA}_t$ are dummy variable that take value $1$ is the couple respectively separate of marry and 0 otherwise. The formal probelm that a cohabiting couple is $t$ solve is:
+\begin{equation}\label{eq:v_coh}
+\begin{split}
+V_t^{C}(\Omega^{C}_t)=&\max_{\mathbf{q}^C_t} (1-S_t)\{\theta^f_{t+1} u(c^f_t,Q_t)+\theta^m_{t+1} u(c^m_t,Q_t)+\psi_t+\beta E_t V^{C}_{t+1}(\Omega^{C}_{t+1})\}
+\\ &\quad\quad+MA_t\{\theta^f_{t+1} u(c^f_t,Q_t)+\theta^m_{t+1} u(c^m_t,Q_t)+\psi_t+\beta E_t V^{M}_{t+1}(\Omega^{M}_{t+1})\}\\ &\quad\quad\quad\quad+S_t \{\theta^f_{t}V^{fS}_{t}(\omega^{f}_{t+1})+\theta^m_{t} V^{mS}_{t}(\omega^{m}_{t}))\}
+\\ &\text{if $S_t=0$:}\hspace{35pt}\text{s.t. \eqref{eq:bcm} and \eqref{eq:pfunction},}\\ &\hspace{80pt}
+\theta^f_{t+1}=\theta^f_{t}+\mu^f_t,\\ &\hspace{80pt}
+\theta^m_{t+1}=\theta^m_{t}+\mu^m_t,
+\\ &\text{if $S_t=1$:}\hspace{35pt}\text{s.t. \eqref{eq:bcs}, \eqref{eq:pfunction} for $i\in\{f,m\}$,}\\ &
+\hspace{80pt}a_t^m+a_t^f= a_t,	\\ &
+\hspace{80pt}a_t^m,a_t^f\text{ determined as in the title based regime},
+\end{split}
+\end{equation}
+where $\theta^f_{t+1}$ and $\theta^m_{t+1}$ adjust such that the following participation constraints are satisfied:
+\begin{equation}\label{eq:p_cons_coh}
+\begin{split}
+&
+W^{fC}_{t}(\Omega^{C}_{t})\geq V_{t}^{fS}(\omega^f_{t}),\\ &
+W^{mC}_{t}(\Omega^{C}_{t})\geq V_{t}^{mS}(\omega^m_{t}). 
+\end{split}
+\end{equation}
+Note that $\mu^i_t$ are the langrange multipliers associated with spouses' participation constraints.
+
+$W_{t}^{iC}$ for $i\in\{f,m\}$ is defined as 
+\begin{equation}
+W_{t}^{iC}=u(\tilde{c}_t^{i},\tilde{Q}_t^{i})+\psi_t+\beta E_t V_{t+1}^{iC}(\Omega^{C}_{t+1}),
+\end{equation}
+\subsection{Partnership Choice and the Mating Market}\label{ssec:marriage_market}
+In each period $t$ singles have a probability $\lambda_t$ to meet a potential partner of their same age and with a productivity and wealth that depends on their productivity $z_t$ and assets $a_{t}$. Formally:
+\begin{equation}\label{mma}
+\ln(a^p_t)=\ln(a_{t})+\hat{\epsilon}\text{, where }\hat{\epsilon}\sim\mathcal{N}(0,\sigma^2_{\hat{p}}),
+\end{equation}
+\begin{equation}\label{mmz}
+z^p_t=z_{t}+\tilde{\epsilon}\text{, where }\tilde{\epsilon}\sim\mathcal{N}(0,\sigma^2_{\tilde{p}}).
+\end{equation}
+These assumptions allow us to capture in a reduced from fashion that people are mating assortatively\footnote{In the life cycle models featured in \cite{ciscato2019}, \cite{shephard2019} and \cite{reynoso2019} assortative mating arise in marriage markets through the interactions of preferences, incentives, supply and demand forces.} both within marriage and cohabitation, as \cite{gemici2014} point out.
+Once the meeting happened, agents have to decide whether to stay in a couple and eventually decide which partnership contract to choose. Note that for the rest of this section we will refer to marriage as $M$, but depending on property rights upon divorce we have$M \ \in\{\hat{M},\overline{M}\}$. We model their choices in three steps. 
+\begin{enumerate}
+\item The couple consider marriage $M$ (cohabitation $C$) as a viable alternative if the set of pareto weights\footnote{Without loss of generality, we impose $\theta^f+\theta^m=1$ at first meeting.} $\theta^f$ such that the couple prefers to marry (cohabit) is non-empty. Formally, for relationship $J\in\{M,C\}$ the set is
+\begin{equation}\label{eq:set_couple}
+\Theta^J_t(\Omega^J_t,\omega^f_t,\omega^m_t)=\big\{\theta_t: V_t^{fJ}(\Omega^J_t)\geq V_t^{fS}(\omega^f_t), V_t^{mJ}(\Omega^J_t)\geq V_t^{mS}(\omega^m_t)\big\}.
+\end{equation}
+\item If the set for marriage (cohabitation) is non-empty, the pareto weight for the potential marriage $\theta^{m,f}$ (cohabitation $\theta^{c,f}$) is set through symmetric Nash Bargaining.\footnote{The assumption that the initial pareto weight is pinned down by Nash Bargaining can be found in \cite{low2018}.} Formally\footnote{For consistency with the rest of the paper we define $\Omega^{J,-1}_t$ as the state vector for the couple excluding pareto weights.}, for $J\in\{M,C\}$ $\theta^{J,f}$ is set to :
+\begin{equation}\label{nash_couple}
+\theta^{J,f}= \argmax_{\theta\in\Theta^J_t} \Upsilon^J(\theta,\Omega^{J,-1}_t,\omega^f_t,\omega^m_t),
+\end{equation}
+where
+\begin{equation}
+\Upsilon^J(\theta,\Omega^{J,-1}_t,\omega^f_t,\omega^m_t)=\big[V_t^{fJ}(\Omega^{J,-1}_t)- V_t^{fS}(\omega^f_t)\big]\times\big[ V_t^{mJ}(\Omega^{J,-1}_t)- V_t^{mS}(\omega^m_t)\big].
+\end{equation}
+\item Four possible situation can arise:
+\begin{itemize}
+\item $\Theta^M_t=\O\text{ and }\Theta^C_t=\O \Rightarrow$ stay single.
+\item $\Theta^M_t\neq\O\text{ and }\Theta^C_t=\O \Rightarrow$ marry.
+\item $\Theta^M_t=\O\text{ and }\Theta^C_t\neq\O \Rightarrow$ cohabit.
+\item $\Theta^M_t\neq\O\text{ and }\Theta^C_t\neq\O \Rightarrow$ marry if $ \Upsilon^M(\Omega^M_t,\omega^f_t,\omega^m_t)\geq\Upsilon^C(\Omega^C_t,\omega^f_t,\omega^m_t)$, otherwise cohabit.
+\end{itemize}
+This framework is a natural extension of the nash bargaining problem\footnote{Note that we could have chosen a different protocol for determining the choice between marriage and cohabitation. For example, we could have decided to impose a sequential structure to the problem, assuming that first agents compare cohabitation to singleness, obtaining the envelop of the two, where the pareto weight is set as above. Then, the agents make their final choice solving a pareto problem where the outside option is the outcome of the first step. We tried applying this methodology: results were indistinguishable from our main strategy.} to discrete choices [CITATION OF RELEVANT PAPER HERE].
+\end{enumerate}
+\section{Estimation}
+\section{Counterfactual Experiments}
+\section{Welfare Analysis}
+\section{Conclusion}
+
+\bibliographystyle{achicago}
+\bibliography{mybibliography}
+
+\appendix
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+\section*{Appendix}
+\section{Computational Appendix}
+\cite{arnoud2019}+\cite{cartis2019}
+\section{Estimation of Income Processes}
+
+\end{document}

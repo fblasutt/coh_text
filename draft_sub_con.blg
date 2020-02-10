@@ -1,0 +1,19 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: draft_sub_con.aux
+The style file: apa.bst
+Illegal, another \bibstyle command---line 99 of file draft_sub_con.aux
+ : \bibstyle
+ :          {achicago}
+I'm skipping whatever remains of this command
+Database file #1: mybibliography.bib
+I was expecting a `,' or a `}'---line 84 of file mybibliography.bib
+ : 
+ : note    = {"Working paper"}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty journal in arnoud2019
+Warning--empty journal in gemici2014
+Warning--empty journal in lafortune2019
+Warning--empty journal in low2018
+Warning--empty journal in manning2013
+Warning--empty journal in shephard2019
+(There were 2 error messages)

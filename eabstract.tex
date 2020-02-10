@@ -1,0 +1,200 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+\documentclass[12pt]{article}
+\usepackage[round, sort , authoryear]{natbib}
+
+
+%required by R
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage[normalem]{ulem}
+\usepackage[normalem]{ulem}
+\usepackage[utf8]{inputenc}
+\usepackage{makecell}
+\usepackage{xcolor}
+\usepackage{dcolumn}
+\usepackage{mathtools}% http://ctan.org/pkg/mathtools
+
+%For new line in table
+\usepackage{array}
+\usepackage{makecell}
+
+\renewcommand\theadalign{bc}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+
+%New environments
+\newtheorem{lemma}{Lemma}
+\newtheorem{assumption}{Assumption}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newenvironment{proof}[1][Proof]{\noindent \textbf{#1.} }{\  \rule{0.5em}{0.5em}}
+
+%For tables position
+\usepackage{float}
+\restylefloat{table}
+
+%%% PAGE DIMENSIONS
+\usepackage[margin=2.5 cm]{geometry}
+\usepackage{blindtext} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage[utf8]{inputenc} 
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{epstopdf}
+\usepackage[hang]{footmisc}
+\usepackage{lipsum}
+\usepackage{setspace}
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.13}
+\usepackage{caption}
+\usepackage{threeparttablex}
+\usepackage{color, colortbl}
+\definecolor{Gray}{gray}{0.9}
+%%% PACKAGES
+\usepackage{placeins}
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+% These packages are all incorporated in the memoir class to one degree or another...
+\usepackage{amsmath}
+\numberwithin{table}{section}
+\usepackage{cases}
+\usepackage{graphicx}
+%
+\usepackage{float}
+\usepackage{authblk}
+\usepackage{pgfplots}
+\usepackage{pdfpages}
+\linespread{1.5}
+\setlength{\footnotemargin}{4mm}
+\usepackage{amssymb} 
+\usepackage{tabularx}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\addtolength{\footnotesep}{2mm} % change to 1mm
+
+%For Counting Figures in the Appendix
+\usepackage{chngcntr}
+
+%For subtables
+\usepackage{subcaption}
+
+%For having the catption above tables
+\usepackage{float}
+\floatstyle{plaintop}
+\restylefloat{table}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=BibTeX}
+%TCIDATA{LastRevised=Monday, August 27, 2018 20:06:51}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\restylefloat{table}
+\oddsidemargin  +0.18in
+\evensidemargin +0.18in
+\topmargin 40pt \textheight 8.1in \textwidth 6.5in
+\linespread{1.5}\parskip .05in
+
+
+
+
+
+
+%Nice Figure and table headers
+\captionsetup[figure]{labelfont={sc},name={Figure},labelsep=period}
+%\captionsetup[table]{labelfont={sc},name={Table},labelsep=period,justification=centering}
+
+\usepackage{booktabs}   % for nice tables
+\usepackage[colorlinks=false, linktocpage=true]{hyperref}
+%\usepackage[flushmargin]{footmisc}
+%\addtolength{\footnotesep}{3mm} % change to 1mm
+\hypersetup{
+	colorlinks,
+	linkcolor={blue!50!black},
+	citecolor={blue!50!black},
+	urlcolor={blue!80!black}
+}
+% use for hypertext
+\usepackage[colorinlistoftodos]{todonotes}
+\setlength{\marginparwidth}{2cm}
+\newenvironment{customlegend}[1][]{%
+	\begingroup
+	% inits/clears the lists (which might be populated from previous
+	% axes):
+	\pgfplots@init@cleared@structures
+	\pgfplotsset{#1}%
+}{%
+	% draws the legend:
+	\pgfplots@createlegend
+	\endgroup
+}%
+%For Figures, below
+
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepgflibrary{arrows} % LATEX and plain TEX and pure pgf
+\usepgflibrary[arrows] % ConTEXt and pure pgf
+\usetikzlibrary{arrows} % LATEX and plain TEX when using Tik Z
+\usetikzlibrary[arrows] % ConTEXt when using Tik Z
+\usepackage{hyperref}
+
+
+
+%%% The "real" document content comes below...
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parskip3mm\parindent0cm
+
+\title{Unilateral Divorce and the Rise of Informal Cohabitation}
+\author{Fabio Blasutto$^1$ \quad Egor Kozlov$^2$}
+
+\begin{document}
+	% Bibliography style, important for biblatex functioning	
+	\bibliographystyle{apa}
+	
+	\maketitle
+	
+
+	
+	\footnotetext[1]{IRES, UCLouvain \& National Fund for Scientific Research (Belgium). Email: fabio.blasutto@uclouvain.be}
+	\footnotetext[2]{Northwestern Univrsity. Email: egorkozlov2020@u.northwestern.edu.\\}
+	
+\textbf{Keywords}: Marriage, Cohabitation, Unilateral Divorce, Structural Estimation\\
+\textbf{JEL-Code}: D83 - J12
+	
+\section{Extended Abstract}
+Why do people marry? According to the seminal work of \citet{becker1981}, people marry both for non-economic (i.e. love and companionship) and economic reasons, among which the sharing of public goods, the division of labor to exploit comparative advantages, as in \cite{chiappori1997}, and risk pooling, as the literature on limited commitment, among which \cite{voena2015} and \cite{rigas2015}, points out.
+All these reasons are able to explain why couples decide to live together, but they are silent about the choice between just living "under the same roof in a love relationship", henceforth cohabitation, and marrying. More in particular, it is unclear why does cohabitation started being a frequently chosen type of relationship only in the recent decades in most developed countries and whether economics has something to say about this.
+
+
+In this paper we address these questions, exploiting the variation in US divorce laws\footnote{During this period most states moved from a mutual consent regime, where divorce could happen only if both spouse agreed on that, to a unilateral regime, where the process could be initiated by just one of the two parts.} that took place in the 1970s and 1980s to learn about how individuals choose between different types of partnership. We show that the drop in marriage rates observed after those reforms is driven by the fact that some newly formed couples chose to cohabit instead of marrying. Further, the drop in marriage rates is magnified by the fact that cohabiting couples that were formed after the reform experienced a lower hazard of separation. We argue that these changes are driven by an increased risk of divorce, which made cohabitation a relatively more appealing choice to couples that would have the highest probability of divorcing. Consistently, the observed lower hazard of separation after the reform is due to a composition effect: couples choosing to cohabit because of the reform have on average a better relationship quality than the whole pool of cohabitants. Our mechanism is consistent with the fact that the effects of the policy change are the strongest in states that has a community or equitable distribution property regime within marriage. In fact, in those states the richest one in the couple becomes more willing to cohabit than to marry after the reform: the increased risk of divorced makes her more likely that she looses most of her assets, while this would not happen within a cohabitation, where the property rights upon separation are title based. 
+
+As a first step of our research, we show that the introduction of unilateral divorce caused a behavioral response about how couples choose their relationship. Using data from the 1988 survey of the National Survey of Family Growth and from Wave 1 of the National Survey of Family and the Household, we construct a sample of first and second relationship experienced by primary respondents. Using a generalized difference in differences strategy which exploits the variation over time and across states in the adoption of unilateral divorce laws, we find that the relationship is between 5\% and 10\% more likely to be a cohabitation. The results are robust to the introduction of a state specific linear time trends and a range of socio-demographic characteristics. We also show that this effects is heterogeneous across property rights regimes within marriage, being insignificant in title based states and the strongest in community property states. Then, we explore how the introduction of unilateral divorce affected the risk of separation and marriage of couples that started cohabiting after the reform. Exploiting the same type of variation, we use  a multinomial probit model with month-relationship observations to analyze the duration of cohabitation spells, and we find that both the hazard of marriage and of cohabitation decreases between 10\% and 30\% because of the reform.\\
+To understand the mechanisms that lead to these changes we build a dynamic model of intra household decision making with limited commitment, where cohabitation and marriage differs in the cost of separation and divorce as well as in law that govern the property rights upon divorce, which can vary for marriage while it is always title based for cohabitation. Moreover, separation can always be initiated unilaterally. Individuals are initially single, and with some probability in each period they meet a potential partner, which they can decide to marry or start cohabiting with. Agents take consumption and saving decisions, which depends on their idiosyncratic income shocks and on couple specific love shocks if they are in a relationship. The couple decides collectively how much to consume and save, as wells as the level of female labor supply. Women time can also be used to produce a public good within the household, but this affects negatively future female labor market prospects. Under a bilateral divorce regime the couple behaves as if it was perfectly commited, while in the unilateral scenario allocation rules might change if one part prefers to split with the current allocation, in line with \citet{voena2015}. In this model people choose to marry rather than to cohabit because the high cost of divorce allows for a stronger commitment, which strengthen risk sharing and leads to efficient female labor supply. Cohabitation instead is chosen when couple surplus is low, which imply a high risk of splitting: in this case cohabitation becomes more attractive since separation cost is lower than divorce cost. Since choosing cohabitation versus marriage crucially depends on the hazard that the couple breaks up, the introduction of unilateral divorce makes cohabitation relatively more attractive, which is consistent with the results of our empirical analysis. An additional reason for the shift towards cohabitation is that unilateral divorce decreases the commitment within marriage, which in turns makes the production of the public good within marriage suboptimal: if we interpret the public good as investment in the quality of children, this argument follows closely \citet{lafortune2019}. Despite being important, this mechanism is unlikely to be the main reason for partnership choice, as it predicts a larger shift to cohabitation in states with title based property rights within marriage, which contradicts empirical evidence. Instead, the increased risk of divorce type of mechanism predicts, consistently with the data, a larger shit to cohabitation in community property states. In fact, under the assumption of imperfectly transferable utility of our model, the introduction of unilateral divorce makes marriage less attractive to the richest member of the couple, which would become more likely to lose most of her wealth if she marry.\\
+We then estimate the model using the method of indirect inference, using as targets the results from our empirical analysis, as well as the share of people married and cohabiting by age, the hazard of divorce and separation by couple duration. The estimated model is then used to perform a welfare analysis of the introduction of unilateral divorce laws, with a particular attention to the differential effect on men and women. Intuitively, welfare effects crucially depends of which is the part that first wants to initiate the divorce, since it would gain from being granted the right of starting the process unilaterally. The recent work of \citet{fernandez2017} shows that the aggregate welfare of women is decreasing because of the reform, while our model suggests the opposite, since in our model women are the most likely to initiate divorce. Intuitively, this happens because men, who are on average wealthier, are less likely to initiate divorce since they would lose a larger share of their assets upon divorce. For the same reason, men are also prefers cohabitation over marriage, but choosing the first type of relationship comes with the cost of allowing the women to access a larger share of couple resources.
+
+
+
+\bibliography{mybibliography}
+\end{document}
