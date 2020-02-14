@@ -559,11 +559,43 @@ where
 This framework is a natural extension of the nash bargaining problem\footnote{Note that we could have chosen a different protocol for determining the choice between marriage and cohabitation. For example, we could have decided to impose a sequential structure to the problem, assuming that first agents compare cohabitation to singleness, obtaining the envelop of the two, where the pareto weight is set as above. Then, the agents make their final choice solving a pareto problem where the outside option is the outcome of the first step. We tried applying this methodology: results were indistinguishable from our main strategy.} to discrete choices.
 \end{enumerate}
 \section{Estimation}
-We estimate our model following a two step procedure. In a first step, we set some parameters outside the model. This can be done for parameters that can be directly linked to the data and for parameters that our data does not directly identifies, and that are hence fixed according to findings coming from the existing literature. Moreover, we also estimate the labor income processes of men and women outside the model: this procedure is common in the literature\footnote{See for example \cite{voena2015}, \cite{reynoso2019} and \cite{gourinchas2002}.} and it has been used to reduce the burden of structural estimation.
- In the second step we use the simulated method of mooments to estimate the deep parameters of the model. In this section we described in detailed every step of the estimation, we discuss the identification of the structural parameters and the results.
+We estimate our model following a two step procedure. In a first step, we set some parameters outside the model. This can be done for parameters that can be directly linked to the data and for parameters that our data does not directly identifies: those are fixed according to findings coming from the existing literature. Moreover, we also estimate the labor income processes of men and women outside the model: this procedure is common in the literature\footnote{See for example \cite{voena2015}, \cite{reynoso2019} and \cite{gourinchas2002}.} and it has been used to reduce the burden of structural estimation.
+ In the second step we use the simulated method of moments to estimate the deep parameters of the model. In this section we described in detailed every step of the estimation and we discuss the identification of the structural parameters as well as the results.
 \subsection{Income Processes}
+For both men and women we model the hourly wage rate using PSID, dividing the annual labor income by the number of yearly working hours supplied. In this way we avoid considering a variation in working hours as a productivity shock. This correction is particularly relevant for the estimation of women's income process, as the variance of hours worked per year is considerably higher than for men. For our estimation we consider the $1968$-$1993$ waves of the PSID, including men and women between age 20 and 65.
+
+For the estimation of men's processes we proceed estimating the following model for man $i$, of age $t$, from state $s$  in survey year $sur$:
+\begin{equation}\label{eq:male_earn}
+\ln(w^m_{i,t,s,sur})=\iota^m_0+\iota^m_1*t+\iota^m_2*t^2+\delta_s+\nu_{sur}+u_{i,t,s,sur}^m,
+\end{equation}
+where $u_{i,t,s,sur}^m=z_t^m+e^m_{i,t,s,sur}$. $z_t^m$ follows equation $\ref{eq:pcomp}$, while $e^m_{i,t,s,sur}$ is the measurment error. Instead, $\delta_s$ are state fixed effects and $\nu_{sur}$ are year of the survey fixed effects. We then estimate equation \ref{eq:male_earn}, whose results are reported in table \ref{table:inc_men}: this allow us to obtain the residuals  $\hat{u}_{t}^m$. We then use the regression residuals to estimate through GMM the variance of the permanent component of income $\sigma_\zeta^{2_m}$ and the one of the measurment error $\sigma_e^{2_m}$ using the following conditions:
+\begin{equation}\label{eq:male_gmm}
+\begin{split}
+E(\Delta\hat{u}_{t}^m)&=\sigma_\zeta^{2_m}+2\sigma_e^{2_m}\\
+E(\Delta\hat{u}_{t}^m\Delta\hat{u}_{t-1}^m)&=-\sigma_e^{2_m}
+\end{split}
+\end{equation}
+Results are reported in table \ref{table:income_params}.
+
+The estimation of female's labor earning differs from the men's one since we need to take into account the endogeneity of female labor participation. We do so using a Heckman selection correction procedure. Female labor earnings of female $i$, of age $t$, from state $s$  in survey year $sur$:
+\begin{equation}\label{eq:femae_earn}
+\ln(w^f_{i,t,s,sur})=\iota^f_0+\iota^f_1*t+\iota^f_2*t^2+\delta_s+\nu_{sur}+u_{i,t,s,sur}^f,
+\end{equation}
+where $u_{i,t,s,sur}^f=z_t^f+e^f_{i,t,s,sur}$. $z_t^f$ follows equation $\ref{eq:pcomp}$, while $e^f_{i,t,s,sur}$ is the measurment error. Instead, $\delta_s$ are state fixed effects and $\nu_{sur}$ are year of the survey fixed effects. We observe female wages only if
+\begin{equation}\label{eq:femae_part}
+\gamma'\mathbf{Z}_{i,t,s,sur}+\pi_{i,t,s,sur}>0,
+\end{equation}
+where $\mathbf{Z}_{i,t,s,sur}$ includes all the regressors in \ref{eq:femae_earn} plus the interaction of unilateral divorce\footnote{This strategy has been used by \cite{voena2015} and \cite{reynoso2019}} with property rights regimes upon divorce. The estimation results of the two steps are reported in tables \ref{table:prb_wom} and \ref{table:inc_wom}. Finally, we use the regression residuals from the second step $\hat{u}_{t}^m$  to estimate through GMM the variance of the permanent component of income $\sigma_\zeta^{2_f}$ and the one of the measurment error $\sigma_e^{2_f}$ using the following conditions\footnote{The conditions are those used by \cite{low2018}.}:
+\begin{equation}\label{eq:female_gmm}
+\begin{split}
+E(\Delta\hat{u}_{t}^f | P^f_t=1,P^f_{t-1}=1)&=\sigma_\pi^{f}\frac{\phi(\tau_t)}{1-\Phi(\tau_t)},\\
+E(\Delta(\hat{u}_{t}^{f})^2 | P^f_t=1,P^f_{t-1}=1)&=\sigma_\zeta^{2_f}+\sigma_\pi^{2_f}+2\sigma_e^{2_f}+\tau_t\frac{\phi(\tau_t)}{1-\Phi(\tau_t)},\\
+E(\Delta\hat{u}_{t}^f\Delta\hat{u}_{t-1}^f | P^f_t=1,P^f_{t-1}=1,P^f_{t-2}=1))&=-\sigma_e^{2_f}.
+\end{split}
+\end{equation}
+Results are displayed in table \ref{table:income_params}.
+
 \begin{table}[H]
-\label{table:income_params}
 \caption{\\Parameters of the Income Processes} % title of Table
 \centering % used for centering table
 \begin{threeparttable}
@@ -585,6 +617,7 @@ We estimate our model following a two step procedure. In a first step, we set so
 \footnotesize{\item \textsc{Notes}: The parameters are estimated using nonlinear least squares using single, cohabiting and married males and females from the PSID. Standard errors are computed by bootstrap.}
 \end{tablenotes}
 \end{threeparttable}
+\label{table:income_params}
 \end{table}
 \FloatBarrier
 \subsection{Preset Parameters}
@@ -626,7 +659,15 @@ $Q_t=[d_t^\nu+\kappa {(1-P^f_t)}^\nu]^{\frac{1}{\nu}}$&
 
 
 \subsection{Method of Simulated Moments}
+We use the method of simulated moments (\citealp{mcfadden1989} and \citealp{pakes1989}) to pin down the vector $\vartheta=(\alpha, \lambda, \sigma_\psi, \sigma_{\psi,I}, \delta, \mu)$ of the 6 remaining parameters of the model. We use 38 moments for the structural estimation, which capture the process of marriage cohabitation creation and dissolution, as well the labor supply behavior of women. More precisely, we include moments about the hazard of divorce (12), the hazard of separation (6), the hazard of marriage (6), the share of people everm married over time (6), the share of people that ever cohabited over time (6), female labor force participation (1), and differences in female labor force participation between marriage and cohabitation (1). We use the retrospective marital hisotry data from the NSFH wave III to construct\footnote{NSFH wave III is conducted in 2001/2003 following the original respondents of wave 1. This sample does not include respondents under age 45 as of January 2000 unless some particular conditions are met, but this is not an issue for us since the youngest person in our estimating sample was 44 in 2000. One possible issue with this data is that by mistake during NSFH wave II  all cohabiting couples were dropped by the sample. We can circumvent this issue simulating the same "mistake" dropping some observation from the fictional samples.} moments about marriage and cohabitation, while we use the PSID for female labor supply. We include in the sample for the data moment construction male and females born in 1945-1955, which allow us to follow them unitl a late age, and also to observe how their behavior react to changes in divorce laws. 
+The first step for the estimation is to solve the model for a vecto of paramters $\vartheta$, then simulating income and love shocks, we obtain the simulated behavior for the given parametrization. This allow us to compare the simulated and the data moments: the objective is to obtain $\vartheta$ such that this difference is the smallest possible. Formally, the problem that we solve is
+\begin{equation}
+\hat{\vartheta}=\arg\min_\theta \quad\quad (\mathbf{m}-\mathbf{m}_\vartheta)'\mathbf{W}(\mathbf{m}-\mathbf{m}_\vartheta),
+\end{equation}
+where $\mathbf{m}$ is the vector of empirical moments, as described in the section about target moments, while $\mathbf{m}_\vartheta$ is the vector of the moments simulated by the model parametrized with $\vartheta$. $\mathbf{W}$ is a matrix where the diagonal contains the inverse of the variance of the data moments, while all the other entries are zeros.  The minimization of this object function is performed using a global minimization algorithm called TikTak, which is described in detail in appendix \ref{section:computation}.
+
 \subsection{Identification}
+This section provides a description of how, heuristically, the structural parameters of the model are identified. The parameter $\alpha$ is identified by total female labor force participation: when this parameter is large the household want to produce more of public good which require female time. Instead $\mu$ affects the gap in female labor force participation for married and cohabiting couples: when this parameter is large, specialization within cohabitation becomes harder, which increases the gap. $\lambda$ is intuitively identified by the share of people in a relationship, while $\delta$ is informative about the gains of marriage with respect to cohabitation. The parameter $\sigma_{\psi,I}$ is identified by the hazard of separation and marriage: when this parameter is small compared to the variance of the transitory shocks, agents are not \textit{picky} about sorting into cohabtitation, but they move fast to a new relationship or they separate within the first periods of the relationship. Finally, $\sigma_{\psi}$ identifies the hazard of divorce: the larger the variance in the shocks, the more higher would be the likelihood that marriage surplus becomes negative. We did not use the results from the empirical part as targets as we think that would provide rendundant information about the identification. More in particular, as the risk of divorce is the main driver of the reaction to divorce laws, $\sigma_{\psi}$  is also identifying the parameters of the quasi experiment regression.
 \subsection{Results}
 
 %Table of deep parameters
@@ -642,7 +683,7 @@ $Q_t=[d_t^\nu+\kappa {(1-P^f_t)}^\nu]^{\frac{1}{\nu}}$&
 \ Standard deviation of match quality shock         & $\sigma_{\psi}$  & 0.18 & MSM \\[0.45ex]
 \ Standard deviation of initial match quality shock & $\sigma_{\psi,I}$         & 0.21  & MSM \\[0.45ex]
 \ Probability of meeting a partner               & $\lambda$       & -3.55 & MSM \\[0.45ex]
-\ Divorce cost                                 & $\sigma$             & 0.20  & MSM \\[0.45ex]
+\ Share assets left upon divorce                                 & $\delta$             & 0.80  & MSM \\[0.45ex]
 \ Weight of public good               & $\alpha$             & 0.18 & MSM \\[0.45ex]
 \ Loss in productivity while not working               & $\mu$             & 0.21 & MSM \\[0.45ex]
 \hline
@@ -666,9 +707,72 @@ $Q_t=[d_t^\nu+\kappa {(1-P^f_t)}^\nu]^{\frac{1}{\nu}}$&
 \section*{Appendix}
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
-\section{Computational Appendix}
+\section{Computational Appendix}\label{section:computation}
 \cite{arnoud2019}+\cite{cartis2019}
 \section{Estimation of Income Processes}
+
+%MARRUAGE TO DIVORCE
+{	
+	\def\onepc{$^{\ast\ast}$} \def\fivepc{$^{\ast}$}
+	\def\tenpc{$^{\dag}$}
+	\def\legend{\multicolumn{1}{l}{\footnotesize{Significance levels
+				:\hspace{1em} $\ast$ : 10\% \hspace{1em}
+				$\ast\ast$ : 5\% \hspace{1em} $\ast\ast\ast$ : 1\% \normalsize}}}
+	\begin{table}[htbp]\centering
+	\caption{\\OLS Regression. Observation: Males in Year $t$.}
+	\label{table:inc_men}
+	\begin{threeparttable}[t]\centering
+	\input{inc_men}
+	\end{tabular}}
+\begin{tablenotes}[flushleft]
+\footnotesize{\item \textsc{Notes}: Standard errors are obtained through bootstrapping and they are reported in summary table \ref{table:income_params}.}
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+}
+\FloatBarrier
+%MARRUAGE TO DIVORCE
+{	
+	\def\onepc{$^{\ast\ast}$} \def\fivepc{$^{\ast}$}
+	\def\tenpc{$^{\dag}$}
+	\def\legend{\multicolumn{1}{l}{\footnotesize{Significance levels
+				:\hspace{1em} $\ast$ : 10\% \hspace{1em}
+				$\ast\ast$ : 5\% \hspace{1em} $\ast\ast\ast$ : 1\% \normalsize}}}
+	\begin{table}[htbp]\centering
+	\caption{\\OLS Regression. Observation: Females in Year $t$.}
+	\label{table:inc_wom}
+	\begin{threeparttable}[t]\centering
+	\input{inc_wom}
+	\end{tabular}}
+\begin{tablenotes}[flushleft]
+\footnotesize{\item \textsc{Notes}: Standard errors are obtained through bootstrapping and they are reported in summary table \ref{table:income_params}.}
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+}
+\FloatBarrier
+
+%MARRUAGE TO DIVORCE
+{	
+	\def\onepc{$^{\ast\ast}$} \def\fivepc{$^{\ast}$}
+	\def\tenpc{$^{\dag}$}
+	\def\legend{\multicolumn{1}{l}{\footnotesize{Significance levels
+				:\hspace{1em} $\ast$ : 10\% \hspace{1em}
+				$\ast\ast$ : 5\% \hspace{1em} $\ast\ast\ast$ : 1\% \normalsize}}}
+	\begin{table}[htbp]\centering
+	\caption{\\Probit Regression. Observation: Females in Year $t$.}
+	\label{table:prb_wom}
+	\begin{threeparttable}[t]\centering
+	\input{prb_wom}
+	\end{tabular}}
+\begin{tablenotes}[flushleft]
+\footnotesize{\item \textsc{Notes}: standard errors are clustered at the state level.
+	Coefficients that are significantly different from zero are denoted by the following system: *10\%, **5\%  and ***1\%. \ref{table:income_params}.}
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+}
+\FloatBarrier
 \section{Robustness Checks - Empircal Analysis}
 \subsubsection*{Relationship Choice - Linear State Trends}
 
@@ -684,7 +788,7 @@ $Q_t=[d_t^\nu+\kappa {(1-P^f_t)}^\nu]^{\frac{1}{\nu}}$&
 	\end{tablenotes}
 	\end{threeparttable}
 	\end{table}
-
+\FloatBarrier
 \subsubsection*{Relationship Choice - Heterogeneity by Propoerty regime and linear state trends}
 
 %RELATIONSHIP CHOICE
@@ -700,7 +804,7 @@ $Q_t=[d_t^\nu+\kappa {(1-P^f_t)}^\nu]^{\frac{1}{\nu}}$&
 	\end{tablenotes}
 	\end{threeparttable}
 	\end{table}
-
+\FloatBarrier
 
 \FloatBarrier
 \subsubsection*{Relationship Choice - Logit}
@@ -717,6 +821,6 @@ $Q_t=[d_t^\nu+\kappa {(1-P^f_t)}^\nu]^{\frac{1}{\nu}}$&
 	\end{tablenotes}
 	\end{threeparttable}
 	\end{table}
-
+\FloatBarrier
 
 \end{document}
