@@ -12,8 +12,14 @@
 \BOOKMARK [2][-]{subsection.4.6}{Household Planning Problem}{section.4}% 12
 \BOOKMARK [2][-]{subsection.4.7}{Partnership Choice and the Mating Market}{section.4}% 13
 \BOOKMARK [1][-]{section.5}{Estimation}{}% 14
-\BOOKMARK [1][-]{section.6}{Counterfactual Experiments}{}% 15
-\BOOKMARK [1][-]{section.7}{Welfare Analysis}{}% 16
-\BOOKMARK [1][-]{section.8}{Conclusion}{}% 17
-\BOOKMARK [1][-]{appendix.A}{Computational Appendix}{}% 18
-\BOOKMARK [1][-]{appendix.B}{Estimation of Income Processes}{}% 19
+\BOOKMARK [2][-]{subsection.5.1}{Income Processes}{section.5}% 15
+\BOOKMARK [2][-]{subsection.5.2}{Preset Parameters}{section.5}% 16
+\BOOKMARK [2][-]{subsection.5.3}{Method of Simulated Moments}{section.5}% 17
+\BOOKMARK [2][-]{subsection.5.4}{Identification}{section.5}% 18
+\BOOKMARK [2][-]{subsection.5.5}{Results}{section.5}% 19
+\BOOKMARK [1][-]{section.6}{Counterfactual Experiments}{}% 20
+\BOOKMARK [1][-]{section.7}{Welfare Analysis}{}% 21
+\BOOKMARK [1][-]{section.8}{Conclusion}{}% 22
+\BOOKMARK [1][-]{appendix.A}{Computational Appendix}{}% 23
+\BOOKMARK [1][-]{appendix.B}{Estimation of Income Processes}{}% 24
+\BOOKMARK [1][-]{appendix.C}{Robustness Checks - Empircal Analysis}{}% 25

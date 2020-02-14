@@ -1,0 +1,35 @@
+\footnotesize 
+\begin{tabular}{@{\extracolsep{5pt}}lcccc} 
+\\[-1.8ex]\hline 
+\hline 
+\\[-1.8ex] & \multicolumn{1}{c}{Full Sample} & \multicolumn{1}{c}{Resident}& \multicolumn{1}{c}{NSFH}& \multicolumn{1}{c}{NSFG} \Writing to file mpc.tex
+Processing code chunks with options ...
+
+You can now run (pdf)latex on ‘mpc.tex’
+}{c}{(4)}\\ 
+\hline \\[-1.8ex] 
+\\[-2.2ex] & \multicolumn{4}{c}{Risk of Marriage relative to Cohabitation} \\  
+ \hline \\[-1.8ex]
+ Unilateral Divorce &  -0.09  &  -0.07  &  -0.12  &  -0.13  \\ 
+  & ( 0.04 ) & ( 0.04 ) & ( 0.04 ) & ( 0.11 ) \\  
+ \hline \\[-1.8ex]
+ Average Relative Risk &  -0.12  &  -0.08  &  -0.2  &  -0.14  \\ 
+ \hline \\[-1.8ex]
+ \\[-2.2ex] & \multicolumn{4}{c}{Risk of Separation relative to Cohabitation} \\  
+ \hline \\[-1.8ex]
+ Unilateral Divorce &  -0.04  &  -0.09  &  -0.05  &  -0.06  \\ 
+  & ( 0.02 ) & ( 0.02 ) & ( 0.02 ) & ( 0.1 ) \\  
+ \hline \\[-1.8ex]
+ Average Relative Risk &  -0.06  &  -0.18  &  -0.1  &  -0.06  \\ 
+ \hline \\[-1.8ex]
+State Fixed effects & Yes & Yes & Yes & Yes \\ 
+Year Fixed effects & Yes & Yes & Yes & Yes \\ 
+Age Polynomial & Yes & Yes & Yes & Yes \\
+Picewise Duration & Yes & Yes & Yes & Yes \\ 
+\hline
+Observations & \multicolumn{1}{c}{ 138012 } & \multicolumn{1}{c}{ 81920 } & \multicolumn{1}{c}{ 77826 } & \multicolumn{1}{c}{ 60186 } \\ 
+\hline
+Censored spells(\%) & \multicolumn{1}{c}{ 10.18 } & \multicolumn{1}{c}{ 10.98 } & \multicolumn{1}{c}{ 11.6 } & \multicolumn{1}{c}{ 8.38 } \\ 
+\hline 
+\hline \\[-1.8ex] 
+\end{tabular}

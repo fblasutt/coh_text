@@ -37,6 +37,9 @@
 \renewcommand\theadgape{\Gape[4pt]}
 \renewcommand\cellgape{\Gape[4pt]}
 
+%Write a vecor
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+
 %New environments
 \newtheorem{lemma}{Lemma}
 \newtheorem{assumption}{Assumption}
@@ -47,6 +50,7 @@
 %For tables position
 \usepackage{float}
 \restylefloat{table}
+
 
 %%% PAGE DIMENSIONS
 \usepackage[margin=2.5 cm]{geometry}
@@ -95,6 +99,17 @@
 %For Counting Figures in the Appendix
 \usepackage{chngcntr}
 
+%No Counting within section
+\DeclareCaptionLabelSeparator{none}{}
+\captionsetup{labelsep=none}
+\counterwithout{figure}{section}
+\counterwithout{table}{section}
+
+
+%Nice Figure and table headers
+\captionsetup[figure]{labelfont={sc},name={Figure},labelsep=period}
+\captionsetup[table]{labelfont={sc},name={Table},labelsep=period,justification=centering}
+
 %For subtables
 \usepackage{subcaption}
 
@@ -102,6 +117,8 @@
 \usepackage{float}
 \floatstyle{plaintop}
 \restylefloat{table}
+
+
 
 %Math stuff
 \DeclareMathOperator*{\argmax}{arg\,max}
@@ -127,8 +144,8 @@
 
 
 %Nice Figure and table headers
-\captionsetup[figure]{labelfont={sc},name={Figure},labelsep=period}
-%\captionsetup[table]{labelfont={sc},name={Table},labelsep=period,justification=centering}
+\captionsetup[figure]{labelfont={sc},name={Figure},labelsep=none}
+\captionsetup[table]{labelfont={sc},name={Table},labelsep=none,justification=centering}
 
 \usepackage{booktabs}   % for nice tables
 \usepackage[colorlinks=false, linktocpage=true]{hyperref}
@@ -199,7 +216,7 @@
 	\footnotetext[2]{Northwestern Univrsity. Email:  \tt{egorkozlov2020@u.northwestern.edu}.\\}
 	
 \begin{abstract}
-	Does unilateral divorce eroded the gains of marriage with respect to informal cohabitation? Exploiting the staggered introduction of unilateral divorce across U.S. states, we show that after the reform newly formed relationships are more likely to be cohabitations instead of marriages, and that cohabitation spells last longer. To understand the mechanisms underlying the law changes, we build and estimate a structural life cycle model with partnership choice, where the gains from marriage with respect to cohabitation come from a better cooperation within the household, enforced through a costly divorce, which acts as a commitment technology. In the model the reform increase the risk of divorce, making cohabitation preferred to couples that would have had the highest risk of divorce. Since the couples switching relationship are on average better matched than the average cohabitants, the length of cohabitations increases.
+	Does unilateral divorce eroded the gains of marriage with respect to informal cohabitation? Exploiting the staggered introduction of unilateral divorce across U.S. states, we show that after the reform newly formed relationships are more likely to be cohabitations instead of marriages, and that cohabitation spells last longer. To understand the mechanisms underlying the law changes, we build and estimate a structural life cycle model with partnership choice, where the gains from marriage with respect to cohabitation come from a better cooperation within the household, enforced through a costly divorce, which acts as a commitment technology. In the model the reform increase the risk of divorce, making cohabitation preferred to couples that would have had the highest risk of divorce. Since the couples switching relationship are on average better matched than the average cohabitants, the duration of cohabitations increases.
 \end{abstract}
 \textbf{Keywords}: Marriage, Cohabitation, Unilateral Divorce, Structural Estimation\\
 \textbf{JEL-Code}: D83 - J12
@@ -209,9 +226,9 @@
 Cohabitation is on the rise: according to \cite{manning2013}, the share of women that ever cohabited moved from 33\% in 1987 to 60\% in 2010. Why did this happen?
 Since the seminal work of Becker (\citealp{becker1981}), economists studied the incentives behind the decision to marry, among which the sharing of public goods, the division of labor to exploit comparative advantages (\citealp{chiappori1997}), and risk sharing (\citealp{voena2015} and \citealp{rigas2015}). These reasons tell us why couples live together, while they are actually silent about the choice between marriage and informal cohabitation, two partnership contracts subject to different rules. While the literature often simplifies, avoiding the distinction between these two, they display a different labor supply, wealth accumulation and educational composition. It is not surprising that households, the smallest economic unit, can behave differently when the contract ruling them is different, but this can be the key to understand important economic phenomena. For example, cohabitation display a much higher separation rate than marriages, which might be a cause of the high share of single mothers living in the US nowadays, which is the single strongest predictor for upward mobility\footnote{While the share of single mothers is the strongest predictor of differences in upward mobility across counties on top of segregation, residential segregation, income inequality, social capital, school quality, and racial shares, \cite{chetty2018} points out that half of this effect is due to self selection.} according to \cite{chetty2018}. If we want to understand the behavior of cohabiting households and the implication of it, we first need to understand their formation and why they are growing in number.
 
-In this paper we address the question of the rise of cohabitation, focusing on the role of unilateral divorce on the share of people that decides to cohabit. Our main contribution is to show that the rate of cohabitation increased after the changes in the US law and that the underlying mechanism is that the increased risk of divorce makes marriage less attractive. As a consequence, cohabitation becomes the preferred choice to couples that would have experienced the highest risk of divorce. As a consequence, the average match quality of cohabiting couples increase, which increases the length of cohabitation spells.
+In this paper we address the question of the rise of cohabitation, focusing on the role of unilateral divorce on the share of people that decides to cohabit. Our main contribution is to show that the rate of cohabitation increased after the changes in the US law and that the underlying mechanism is that the increased risk of divorce makes marriage less attractive. As a consequence, cohabitation becomes the preferred choice to couples that would have experienced the highest risk of divorce. As a consequence, the average match quality of cohabiting couples increase, which increases the duration of cohabitation spells.
 
-We first use data from the National Survey of Family and the Household and of the National Survey of Family Growth to build a sample of first and second relationships\footnote{A relationship is defined as an interruption of the state of singleness, which can either be marriage or cohabitation.}. Then, exploiting the exogenous variation coming from the staggered introduction of unilateral divorce over time across US states, we show that cohabitation becomes around 5\% more likely  to be chosen compared to the pre-reform period. Interestingly,  the effect is heterogeneous on how property is divided upon divorce, being strongest in states where each spouse gets half of the wealth. This suggest that the result cannot be entirely due to a deterioration of divorce as a commitment technology\footnote{This mechanism is highlighted by \cite{lafortune2019}, where the equal division of assets within marriage makes possible to efficiently invest in children even after the rise of unilateral divorce.}, since the egalitarian property division rule can act as a substitute of the mutual consent regime. Moreover, we analyze how unilateral divorce affected the length of newly formed cohabitation spells, showing that they last longer both because of a reduced risk of marriage and separation.
+We first use data from the National Survey of Family and the Household and of the National Survey of Family Growth to build a sample of first and second relationships\footnote{A relationship is defined as an interruption of the state of singleness, which can either be marriage or cohabitation.}. Then, exploiting the exogenous variation coming from the staggered introduction of unilateral divorce over time across US states, we show that cohabitation becomes around 5\% more likely  to be chosen compared to the pre-reform period. Interestingly,  the effect is heterogeneous on how property is divided upon divorce, being strongest in states where each spouse gets half of the wealth. This suggest that the result cannot be entirely due to a deterioration of divorce as a commitment technology\footnote{This mechanism is highlighted by \cite{lafortune2019}, where the equal division of assets within marriage makes possible to efficiently invest in children even after the rise of unilateral divorce.}, since the egalitarian property division rule can act as a substitute of the mutual consent regime. Moreover, we analyze how unilateral divorce affected the duration of newly formed cohabitation spells, showing that they last longer both because of a reduced risk of marriage and separation.
 To understand the mechanisms that lead to these changes we build a dynamic model of intrahousehold decision making, where cohabitation and marriage differ in their splitting cost as well as in the way property is divided. While in the case of separation assets are always split as an agreement between spouses, in the case of divorce in some states it is the judge to decide. Moreover, separation can be initiated unilaterally, as opposed to divorce, that would need the consensus of both partner under a mutual divorce regime. Individuals are initially single, and with some probability in each period they meet a potential partner, which they can decide to marry or start cohabiting with. Couples make decisions about consumption, savings and female labor supply and they are subject to idiosyncratic income shocks. Couples also receive time varying match quality shocks, which might drive the couple to change their partnership status (i.e. from cohabitation to marriage) or to separate.  We model the decision making in the couple building on the literature of limited commitment (see for example \cite{kk1996},  \cite{ligon2002}, \cite{marcet2019} and \cite{pavoni2018}), which has been applied to dynamic collective models in the household by \cite{voena2015}, \cite{mazzocco2007}, \cite{foerster2019} and \cite{lise2018} among others. In this framework, when one member of the couple wishes to split, the couple rebargains such that the binding member is made indifferent between separation and staying in a couple\footnote{For particularly bad draws in the match quality or productivity shock this might not be possible and hence the couple would split.}. The gains of marriage with respect to cohabitation come from a better risk sharing and a more efficient specialization in the production of a public good\footnote{We assume that a public good is produced with money an female time. When females stop working for producing such good their potential productivity in the labor market decreases.}, which arise from a better commitment within the couple, enforced by the threat of a costly divorce, which acts as a commitment device. On the other hand, couples that would face a high risk of divorce if married (i.e. because of a low match quality draw) are more likely to choose cohabitation instead, since it implies a lower cost of separation while allowing to enjoy the gains from being in a couple. In the model, a switch from mutual consent to unilateral divorce causes couples to start cohabiting more, since the higher risk of divorce makes the expected value of marriage with respect to cohabitation lower. The effect would be particularly pronounced under community property division of assets upon divorce, since the richest part of the couple  would risk to lose most of its wealth. This mechanism implies that couples that would have married under the old regime, are cohabiting instead. Since those have a higher match quality than the average cohabiting couples, this selection drives down the risk of separation for cohabiting couples, as observed in the data.
 
 We then estimate the model using the simulated method of moments to learn about the size of our main mechanism. We use as targets an array of moments regarding the mating market and the differential female labor supply for cohabiting and married couples. We find that the model is able to reproduce the results from our empirical evidence, thus validating our mechanism. We then run a series of counterfactual experiments to gain intuition about forces that might have contributed to the rise of cohabitation in the last decades. [In particular, we quantify the role of the wage structure and technological progress in the household sector, which increases the opportunity cost of home production with female time and decreases the gains coming from labor market specialization.]
@@ -223,34 +240,147 @@ Third, our paper speaks to the literature studying the changes of the family in 
 The paper is organized as follows: section 2 offers an overview of US divorce laws, section 3 presents the empirical results, while section 4 describes in detail the theoretical model. Section 5 explain the procedure used for the estimation as well as the results. Section 6 report the results from a series of counter-factual experiments, while section 7 performs a welfare analysis. Section 8 draws the conclusions of the paper.
 
 \section{US Divorce Laws: an Overview}
+Between late 1960s and early 1980s most U.S. states experienced fundamental changes in the divorce law, both regarding the right to initiate a divorce without the consent of the other spouse and about the laws that govern the division of assets upon divorce.
+
+Before the 1960s the vast majority of US states had a mutual consent divorce regime\footnote{All the states apart from New Mexico, Oklahoma and Alaska.}, where the agreement of both spouses was needed to obtain a divorce for mundane reasons (i.e. without misconduct by any spouse). Moreover, divorce was permitted for grounds showing guilt of misconduct\footnote{Examples of guilt or misconduct are adultery or abandonment.} by any of the two spouses: for those cases the agreement of the innocent party alone was enough for having a divorce granted.
+From the late 1960s and early 1980s most U.S. states\footnote{A list of the years at which unilateral divorce was introduced in different states can be found in table 1 of \cite{ciacci2017}.} switched to a unilateral divorce regime. Under this regime divorce can be filed by one spouse without the consent of the other.
+
+Another dimension along which divorce laws differs across states is the one about property division regimes. In the United States there are three types of those:
+\begin{enumerate}
+\item \textit{Community Property}. Under this regime the couple are jointly owning family wealth, both those obtained during marriage and before. This implies that when divorce occurs each spouse gets exactly half of the total family wealth.
+\item \textit{Equitable distribution}. Under this regime, it is the court that decides how to split family wealth between the two spouses. This decision is driven by the principle of equity, which is ambiguous: in some cases the wealth is divided exactly in half, while in others a larger share reserved to the party that contributed the most to its accumulation.
+\item \textit{Title Based Regime}. Under this regime wealth is split according to the title of ownership.	
+\end{enumerate}
+
+The comparison between marriage and cohabitation is worth a final remark. Separation can be initiated unilaterally and it falls under the title based property. Another importance difference is that while divorce requires the couple to undergo a legal process, which implies monetary and time costs, separation from cohabitation just requires one member of the couple to leave. 
 \section{Data and Empirical Evidence}
-\subsection{The Dataset}
+\subsection{The Dataset}\label{dataset}
 We begin by describing our data. We use the the National Survey of Family and the Household (NSFH) wave I, and the National survey of Family Growth, 1988 wave. Both surveys were designed to study the causes and consequences of changes happening in families and households within the United States. This is reflected in detailed question regarding the retrospective family history of respondents, which includes information both about marriage and cohabitation. Moreover, primary respondents\footnote{One adult per household was randomly selected as the primary respondent, while in the NSFG respondents are all women of 15-44 years of age.} are asked a large set of questions regarding their socio economic background and the demographics of the household. While the NSFH I is the first of three longitudinal waves, NSFG is made of several repeated cross sectional samples. We decided not to use the other two other waves of the NSFH because in the second wave all currently cohabiting households were dropped from the survey, while the 1988 wave of NSFG is the only one with publicly available information about the residence of the respondents. A drawback of using this data\footnote{We do not have the choice of using other surveys for our analysis, since they either lack the State of residence variable, or they miss information about cohabitation history, or they do not cover people that were in a relationship age at the time the law changed.} is that we know the state of residence of the respondents only at age 16 for the NSFH and at birth for the NSFG. Since we also know whether people lived all their life in the same State we are able to perform our empirical analysis both on the universe and of the subsample of never movers. We will show that point estimates turn out to be statistically not distinguishable between the two samples. Further details regarding those two surveys can be found in \cite{bumpass2017} and \cite{mosher1996}. We use this dataset to build two samples, the one of \textit{first and second relationships} and the one of \textit{first cohabitations}, that are described below.  
 \subsubsection*{First and Second Relationships Sample}
-We want to build a sample to analyze the type of relationship, which can be either marriage or cohabitation,\footnote{Dating is not considered, since we cannot observe this state. Hence, people dating will fall under the category of singles.} that respondents decided to have. The sample is made of first and second relationships. One first relationship is defined observing the first time (if ever) a certain person started cohabiting or married. This observation is associated to the date at which the relationship starts, to the characteristics of the respondent member of the formed couple, and with a \textit{type}, which can either marriage or cohabitation. Note the type of couples that cohabited before marriage is "cohabitation": the transition from cohabitation to marriage is analyzed using the sample of \textit{first cohabitations}. Second relationships  are defined in a similar fashion, but they include only respondents that ended the relationship with their first partner and started a new one with a different person. The way this sample is built implies that for some respondents we will have zero corresponding observations in this sample, while for other we will have other, and for others we will have two. We did not consider third or higher order relationships for our analysis since these individuals would be further away from the age at which we knew their state of residence. In [FIGURE********] we report the descriptive statistics of this sample.
+We want to build a sample to analyze the type of relationship, which can be either marriage or cohabitation,\footnote{Dating is not considered, since we cannot observe this state. Hence, people dating will fall under the category of singles.} that respondents decided to have. The sample is made of first and second relationships. One first relationship is defined observing the first time (if ever) a certain person started cohabiting or married. This observation is associated to the date at which the relationship starts, to the characteristics of the respondent member of the formed couple, and with a \textit{type}, which can either marriage or cohabitation. Note the type of couples that cohabited before marriage is "cohabitation": the transition from cohabitation to marriage is analyzed using the sample of \textit{first cohabitations}. Second relationships  are defined in a similar fashion, but they include only respondents that ended the relationship with their first partner and started a new one with a different person. The way this sample is built implies that for some respondents we will have zero corresponding observations in this sample, while for other we will have other, and for others we will have two. We did not consider third or higher order relationships for our analysis since these individuals would be further away from the age at which we knew their state of residence. Finally, we consider only relationship that started when the respondent was 20 years old or older. In table \ref{table:sum_rel} we report the descriptive statistics of this sample.
+
+\begin{table}[!htbp]\centering
+	\caption{\\Descriptive Statistics, Cohabitation Sample}
+	\label{table:sum_rel}
+\input{sum_sing.tex}
+\end{table}
+\FloatBarrier
 \subsubsection*{First Cohabitation Sample}
-This sample is built to analyze the decisions of cohabiting couples to separate or to marry. It is composed of the first non marital cohabitation experienced by respondents. This sample includes couples that cohabited before marriage, but it also includes cohabitations experienced by people with the following marital history: marriage without premarital cohabitation, divorce, cohabitation with a different person. Each observation of this sample is associated with a starting date, a possible ending date, and an outcome, which can be: still cohabiting, married or separated. In [FIGURE********] we report the descriptive statistics of this sample.
+This sample is built to analyze the decisions of cohabiting couples to separate or to marry. It is composed of the first non marital cohabitation experienced by respondents. This sample includes couples that cohabited before marriage, but it also includes cohabitations experienced by people with the following marital history: marriage without premarital cohabitation, divorce, cohabitation with a different person. Each observation of this sample is associated with a starting date, a possible ending date, and an outcome, which can be: still cohabiting, married or separated. In \ref{table:sum_coh} we report the descriptive statistics of this sample.
+
+\begin{table}[!htbp]\centering
+	\caption{\\Descriptive Statistics, Relationship Sample}
+	\label{table:sum_coh}
+	\input{sum_coh.tex}
+\end{table}
+\FloatBarrier
+
 \subsection{Empirical Evidence}
+Do unilateral divorce affects the partnership choice of couples? We exploit the timing\footnote{See table 1 in \cite{ciacci2017} for the timing of adoption of unilateral divorce.} in the adoption of unilateral divorce as a source of exogenous variation in the right to divorce. This strategy has already been used several times by the literature\footnote{Among the others, see \cite{wolfers2006}, \cite{stevenson2008}, \cite{voena2015}, \cite{reynoso2019} and \cite{ciacci2017}.} to study the non-neutrality of of the rights to divorce on various economic and demographic outcomes. According to \cite{gruber2004}, who reviews the legal literature about the topic, the introduction of unilateral divorce was not view as a tool of social policy, but rather a way to reduce the legal burden of divorce processes. This reasoning is consistent with the fact that this change was not initiated by the most liberal states: New York was the last state to introduce unilateral divorce in October 2010, almost 40 years later than Kentucky. Moreover, \cite{reynoso2019} shows that there is no geographic correlation in adoption. 
+\subsubsection*{Relationship Choice}
+What is the effect of unilateral divorce on the partnerships that couples choose? To answer this question we estimate equation \ref{table:ols_rel_standard}, where $i$ are the newly formed couples, $t$ is the calendar time, and $s$ is the state: 
+\begin{equation}\label{eq:ols_baseline}
+\text{married}_{i,t,s}=\beta_0+\beta_1*\text{Unilatearal}_{t,s}+\mathbf{\gamma'}\mathbf{X}_i+\delta_s+\nu_t+\epsilon_{i,t,s}.
+\end{equation}
+The dependent variable is a dummy take takes value $1$ if the couple $i$, started at time $t$ is state $s$ is a marriage, and 0 if it is cohabitation. The vector $\mathbf{X}_i$ instead includes a set of socio demographic controls, while $\delta_s$ are the state fixed effects and  $\nu_t$ are the time fixed effects. The variable $\text{Unilateral}_{t,s}$ instead is a dummy that takes value $1$ if unilateral divorce wave in place in state $s$ at time $t$: $\beta_1$ instead is the coefficient that is informative about the effect of unilateral divorce on partnership choice. The results of the estimation are reported in table \ref{table:ols_rel_standard} for different samples. Column (1) reports the results for the full sample described in section \ref{dataset}, while column (2) is restricted the observation for which we know that the person lived all its life in the reported states, which ensures that they did not migrate. Finally, columns (3) and (4) restrict the sample to respectively the NSFH and NSFG surveys only .
+%MARRUAGE TO DIVORCE
+
+	\begin{table}[htbp]\centering
+		\caption{\\OLS Regression. Observation: first and second relationships}
+		\label{table:ols_rel_standard}
+		\begin{threeparttable}[t]\centering
+			\input{wmar.tex}
+	\begin{tablenotes}[flushleft]
+		\footnotesize{\item \textsc{Notes}: standard errors are clustered at the state level.
+			Coefficients that are significantly different from zero are denoted by the following system: *10\%, **5\%  and ***1\%.}
+	\end{tablenotes}
+\end{threeparttable}
+\end{table}
+\FloatBarrier
+The results reported in table \ref{table:ols_rel_standard} suggest that the effect of unilateral divorced decreased the share of couples that are married by $-5\%/-6\%$. This results are robust to an alternative specification that includes state specific fixed effects, whose results are reported in  table \ref{table:wmarlin}, and to the use of a logistic regression, reported in table \ref{table:wmar_logit}.
+
+We then move on to better understand the heterogeneity hidden behind the effect of unilateral divorce. Since in some states assets are split in the same way within separation and divorce, which is the case of \textit{title based regime} states, in others this rule is different in others, which is the case of \textit{community property} and \textit{equitable distribution} states. Analyzing this heterogeneity is then interesting to understand how much the asset sharing rule is important in understanding relationship choices.  We hence estimate equation
+
+
+\begin{equation}\label{eq:ols_by_prop}
+\begin{split}
+\text{married}_{i,t,s}=\beta_0+&\beta_1*\text{Unilatearal*No Title Based}_{t,s}\\&+\beta_2*\text{Unilatearal*Title Based}_{t,s}+\\&\quad\quad\beta_3*\text{Title Based}_{t,s}+\mathbf{\gamma'}\mathbf{X_i}+\delta_s+\nu_t+\epsilon_{i,t,s},
+\end{split}
+\end{equation}
+whose  indexes and controls are the same of equation \ref{eq:ols_by_prop}, with the difference that know we capture the interaction of unilateral divorce with asset division regimes interacting $\text{Unilateral}_{t,s}$ with  $\text{Title Based}_{t,s}$ and $\text{No Title Based}_{t,s}$, which indicates whether state $s$ at time $t$ had or not a title based regime. In table \ref{table:wmarc} the report the results of the estimation of equation \ref{eq:ols_by_prop}. Similarly to table \ref{table:ols_rel_standard}, column (1) reports the results for the full sample described in section \ref{dataset}, while column (2) is restricted the observation for which we know that the person lived all its life in the reported states, which ensures that they did not migrate. Finally, columns (3) and (4) restrict the sample to respectively the NSFH and NSFG surveys only.
+
+	\begin{table}[htbp]\centering
+		\caption{\\OLS Regression. Observation: first and second relationships}
+		\label{table:wmarc}
+		\begin{threeparttable}[t]\centering
+			\input{wmarc.tex}
+			\begin{tablenotes}[flushleft]
+				\footnotesize{\item \textsc{Notes}: standard errors are clustered at the state level.
+					Coefficients that are significantly different from zero are denoted by the following system: *10\%, **5\%  and ***1\%.}
+			\end{tablenotes}
+		\end{threeparttable}
+	\end{table}
+\FloatBarrier
+The results show that the effect of unilateral divorce on the likelihood that a couples chooses marriage over cohabitation is significant and around $-5\%/-6\%$ in non title based states, while it is non significant and much smaller in title based states. This results suggests that the fact of having a sharing rule decided by the law is not enough to replace the mutual consent regime as an alternative commitment technology. Instead, this results are consistent with the view that the richest partner start disliking marriage when divorce becomes unilateral, since she would risk to lose most of his wealth upon divorce. This was not happening in mutual consent regime, since she could have exercised her right to veto divorce. In title based state this threat for the richest member of the couple does not exist, hence marriage surplus with respect to cohabitation does not vary significantly. Table \ref{table:wmarlinc} shows that results are robust to the inclusion of state specific linear trends.
+\subsubsection*{Cohabitation Duration}
+What is the effect of unilateral divorce on cohabitation duration? How much of the change is due to a variation in the risk of separation versus the risk of marriage? In order to answer these question, we construct a model of cohabitation duration with multiple risks, namely separation and marriage. Our model builds on \cite{jenkins1995}, who shows how that a logistic regression can be used for studying duration of events, expanding the the dataset of relevant spells to make unit of time per spells observations, where the dependent variable takes value $1$ whenever the event of interest occurs. The natural extension of this model to a multiple risk environment would be to use a multinomial logit. However, the problem with this model is that it assumes independence of irrelevant alternatives, which is particularly unappealing for our problem, since it would imply that the relative probability of choosing marriage over separation stays the same after cohabitation is no longer an option. Hence, we chose to model cohabitation duration with a multinomial probit, where the independence of irrelevant alternatives does not need to be satisfied. We then study the choice of cohabiting couple $i$, at calendar time $t$ in state $s$ and at duration $d$ estimating the following model: 
+\begin{equation}\label{eq:probit_1}
+\begin{split}
+&Y_{i,s,t,d}^\text{Marry}=\beta^\text{Marry}*\text{Unilatearal}_{s,t}+\mathbf{\gamma^{\text{Marry'}}}\mathbf{X_i}+\alpha_d+\delta_s+\nu_t+\epsilon^{\text{Marry}}_{i,s,t,d},\\&
+Y_{i,s,t,d}^\text{Cohabit}=\beta^\text{Cohabit}*\text{Unilatearal}_{s,t}+\mathbf{\gamma^{\text{Cohabit'}}}\mathbf{X_i}+\alpha_d+\delta_s+\nu_t+\epsilon^{\text{Cohabit}}_{i,s,t,d},\\&
+Y_{i,s,t,d}^\text{Separate}=\beta^\text{Separate}*\text{Unilatearal}_{s,t}+\mathbf{\gamma^{\text{Separate'}}}\mathbf{X_i}+\alpha_d+\delta_s+\nu_t+\epsilon^{\text{Separate}}_{i,s,t,d},
+\end{split}
+\end{equation}
+where
+\begin{equation}\label{eq:probit_error}
+\myvec{\epsilon_{i,s,t,d}^{\text{Marry}}\\\epsilon_{i,s,t,d}^{\text{Cohabit}}\\\epsilon_{i,s,t,d}^{\text{Separate}}}\sim\mathcal{N}(\mathbf{0},\mathbf{\Sigma}),
+\end{equation}
+and
+\begin{equation}\label{eq:probit_outcome}
+Y_{i,s,t,d}=
+\begin{cases}  	
+\text{Marry}\hspace{30pt}       \text{if}\hspace{10pt}Y_{i,s,t,d}^\text{Marry}>Y_{i,s,t,d}^\text{Cohabit}\hspace{5pt}\text{and}\hspace{5pt}\hspace{5pt}Y_{i,s,t,d}^\text{Marry}>Y_{i,s,t,d}^\text{Separate}\\
+\text{Cohabit}\hspace{23pt}   \text{if}\hspace{10pt}Y_{i,s,t,d}^\text{Cohabit}>Y_{i,s,t,d}^\text{Marry}\hspace{5pt}\text{and}\hspace{5pt}\hspace{5pt}Y_{i,s,t,d}^\text{Cohabit}>Y_{i,s,t,d}^\text{Separate}\\
+\text{Separate}\hspace{22pt}     \text{otherwise.}
+\end{cases}
+\end{equation}
+The model described above is estimated with bayesian techniques via Markov chain Monte Carlo following the procedure of \cite{imai2005a}, which is implemented using the standard options provided by the $R$ package \textit{MNP} developed by \cite{imai2005b}. The estimation results are reported in table \ref{table:mpc}, where we report results from the full sample in column (1), from the resident only sample in column (2) and from the observations coming from the NSFH and NSFG surveys alone respectively in column (3) and (4). Note that to gain intuition about the size of the results, in  table \ref{table:mpc} we computed the average risk of the event of interest relatively of continue cohabiting.The results shows that unilateral divorce caused an increase in the duration of cohabitation, which comes from both a reduced hazard of marriage and of separation. While the result about the risk of marriage is not unexpected in light of the estimation results described above, the reduced risk of separation brings new insights about the possible mechanisms underlying partnership choices. In fact, the decrease in the risk of separation is consistent with a selection effect: some cohabiting couples would have married if mutual consent divorce was still in place. If the match quality of cohabitations is lower than the one of marriages\footnote{This seems plausible in light of the fact that the risk of divorce is much lower than the risk of separation.}, unilateral divorce drives down the risk of separation because of a selection effect. 
+%Cohabitation Length4
+
+	\begin{table}[htbp]\centering
+		\caption{\\Multinomial Probit. Observation: person-month of cohabitation}
+		\label{table:mpc}
+		\begin{threeparttable}[t]\centering
+			\input{mpc.tex}
+			\begin{tablenotes}[flushleft]
+				\footnotesize{\item \textsc{Notes}: standard errors are obtained through the distribution of parameter obtained using the markov chain monte carlo estimation descibed by \cite{imai2005a}.
+					Coefficients that are significantly different from zero are denoted by the following system: *10\%, **5\%  and ***1\%.}
+			\end{tablenotes}
+		\end{threeparttable}
+	\end{table}
+
+\FloatBarrier
+\FloatBarrier
 \section{The Model}
 This section describes a dynamic life cycle structural model of partnership formation, savings, female labor supply and  home production. Couples act cooperatively subject to limited commitment, which means that rebargaining might happen in response to changes in the outside options, which are assumed to be divorce or separation.
 
 In the model time is discrete, and in each period men and women draw their productivities. If single, with some probability they meet a potential partner: after drawing a match quality shock they decide whether to marry, cohabit or to stay single. Couples observe realization of the match quality shock as well as of their productivity, and according to those they decide whether to stay together or to split. Both singles and couples make consumption and savings decisions, using their money for private or public good expenditure. Couples also make female labor supply decisions\footnote{We assume that single females and all men work full time.} and female time can be used to produce the public good, but this comes at the cost of a loss in productivity. The gains of being in a couple comes from love, risk sharing and labor market specialization. Instead, the gains of marriage with respect to cohabitation comes from a more functioning risk sharing and a better specialization in time use, which derives from the high cost of divorce serving as a commitment device. These gains of marriage deteriorates when the love shock is low enough to cause a high risk of divorce and frequent renegotiations: in this case cohabitation might be the better option, since we assume that the cost of separation will be lower than the cost of marriage.
 	   		\begin{figure}[H]\centering
 	\begin{tikzpicture}[domain=0:1,scale=4]
-	\node [block, name=input,align=center] (sum) {Single\\ 7348};
+	\node [block, name=input,align=center] (sum) {Single};
 	\node [block, above right of=sum, node distance=6cm] (controller) {Separation};
 	\node [block, below right of=controller,
-	node distance=6cm,align=center] (system) {Cohabitation \\ 5308};
-	\draw [<-,  thick, latex-] (controller) -| node[below left]{47,8\%}(system);
+	node distance=6cm,align=center] (system) {Cohabitation };
+	\draw [<-,  thick, latex-] (controller) -| node[below left]{}(system);
 	\node [output, right of=system] (output) {fe};
-	\node [block, below left of=system,  node distance=6cm,align=center] (measurements) {Marriage \\ 2814};
+	\node [block, below left of=system,  node distance=6cm,align=center] (measurements) {Marriage };
 	\node [block, left of=measurements, node distance=4.2cm,align=left] (divorce) {Divorce};
-	\draw [<-,  thick, latex-] (sum) |- node[below right]{100\%} (controller);
-	\draw [->,  thick, -latex] (sum) -- node[above]{72,4\%} (system);
-	\draw [->,  thick, -latex] (system) |-node[above left]{33,8\%} (measurements);
-	\draw [->,  thick, -latex] (measurements) --node[above]{23,5\%} (divorce);
-	\draw [->,  thick, -latex] (sum) --node[above right]{12,9\%} (measurements);
-	\draw [->,  thick, -latex] (divorce) --node[right]{100\%} (sum);
+	\draw [<-,  thick, latex-] (sum) |- node[below right]{} (controller);
+	\draw [->,  thick, -latex] (sum) -- node[above]{} (system);
+	\draw [->,  thick, -latex] (system) |-node[above left]{} (measurements);
+	\draw [->,  thick, -latex] (measurements) --node[above]{} (divorce);
+	\draw [->,  thick, -latex] (sum) --node[above right]{} (measurements);
+	\draw [->,  thick, -latex] (divorce) --node[right]{} (sum);
 	node [near end] {$$} (sum);
 	\end{tikzpicture}
 	\label{fig:scheme}
@@ -269,16 +399,16 @@ while the love shock at first meeting is allowed to have a different variance $\
 \subsection{Home Production}
 In our model each agent in embodied with one unit of time. While singles and married men are assumed to supply inelastically one unit of market labor, females in a couple can be out of the labor force to devote their time producing the home good $Q$. The public good can be produced buying $d$ goods in the market. Following \cite{greenwood2016} we define the production function of home good as:
 \begin{equation}\label{eq:pfunction}
-Q_t=[d_t^\lambda+\kappa {(1-P^f_t)}^\lambda]^{\frac{1}{\lambda}}, \text{ where }0<\lambda<1.
+Q_t=[d_t^\nu+\kappa {(1-P^f_t)}^\nu]^{\frac{1}{\nu}}, \text{ where }0<\nu<1.
 \end{equation}
-The parameter $\lambda$ captures the degree of  substitutability between female time and the use of durables in the production of the home good. This structure implies that when the relative price of durables decreases and when wages goes up, households will use less female time for its production, and hence female employment will increase. The variable  $P^f_t$ is a dummy variable that that takes value $1$ when the women is participating in the labor market.
+The parameter $\nu$ captures the degree of  substitutability between female time and the use of durables in the production of the home good. This structure implies that when the relative price of durables decreases and when wages goes up, households will use less female time for its production, and hence female employment will increase. The variable  $P^f_t$ is a dummy variable that that takes value $1$ when the women is participating in the labor market.
 
 \subsection{Wages}
 The labor income for agents $s\in\{f,m\}$ depends on their age $t$ and on a permanent income component $z^s_t$:
 \[\ln(w^s_t)=f^s_t+z^s_t,\]
 where $f^s_t$ is a gender specific function that captures the evolution of productivity over age. The permanent income component  $z^s_t$ evolves over time as:
 \begin{equation}\label{eq:pcomp}
-z^s_t=z^s_{t-1}-(1-P_t^s) \mu+\zeta^s_{t}\text{, where }\zeta^s_{t}\sim^{iid}\mathcal{N}(0,\sigma^\zeta)\text{, and }\zeta^s_{1}=z^s_{1}.
+z^s_t=z^s_{t-1}-(1-P_t^s) \mu+\zeta^s_{t}\text{, where }\zeta^s_{t}\sim^{iid}\mathcal{N}(0,\sigma_\zeta^{2_s})\text{, and }\zeta^s_{1}=z^s_{1}.
 \end{equation}
 Note that $\mu$ is the loss in productivity that affects women\footnote{As we anticipated men always participate in the labor market, hence $P^m_t=1$ $\forall$ $t$.} that are not participating in the labor market. It can be be interpreted as a reduced form way of capturing both the missed opportunity to accumulate human capital while working as wells as the skill atrophy deriving from interruptions, a phenomenon described by \cite{adda2017}. Modeling the loss in productivity for not working is an important feature of our model as it creates an incentive to join the labor force for women that expect to divorce or separate soon. 
 \subsection{Budget Constraints}
@@ -426,9 +556,104 @@ where
 \item $\Theta^M_t=\O\text{ and }\Theta^C_t\neq\O \Rightarrow$ cohabit.
 \item $\Theta^M_t\neq\O\text{ and }\Theta^C_t\neq\O \Rightarrow$ The couple chooses the partnership that gives the largest Nash product. Formally, if $ \Upsilon^M(\Omega^M_t,\omega^f_t,\omega^m_t)\geq\Upsilon^C(\Omega^C_t,\omega^f_t,\omega^m_t)$, otherwise cohabit.
 \end{itemize}
-This framework is a natural extension of the nash bargaining problem\footnote{Note that we could have chosen a different protocol for determining the choice between marriage and cohabitation. For example, we could have decided to impose a sequential structure to the problem, assuming that first agents compare cohabitation to singleness, obtaining the envelop of the two, where the pareto weight is set as above. Then, the agents make their final choice solving a pareto problem where the outside option is the outcome of the first step. We tried applying this methodology: results were indistinguishable from our main strategy.} to discrete choices [CITATION OF RELEVANT PAPER HERE].
+This framework is a natural extension of the nash bargaining problem\footnote{Note that we could have chosen a different protocol for determining the choice between marriage and cohabitation. For example, we could have decided to impose a sequential structure to the problem, assuming that first agents compare cohabitation to singleness, obtaining the envelop of the two, where the pareto weight is set as above. Then, the agents make their final choice solving a pareto problem where the outside option is the outcome of the first step. We tried applying this methodology: results were indistinguishable from our main strategy.} to discrete choices.
 \end{enumerate}
 \section{Estimation}
+We estimate our model following a two step procedure. In a first step, we set some parameters outside the model. This can be done for parameters that can be directly linked to the data and for parameters that our data does not directly identifies, and that are hence fixed according to findings coming from the existing literature. Moreover, we also estimate the labor income processes of men and women outside the model: this procedure is common in the literature\footnote{See for example \cite{voena2015}, \cite{reynoso2019} and \cite{gourinchas2002}.} and it has been used to reduce the burden of structural estimation.
+ In the second step we use the simulated method of mooments to estimate the deep parameters of the model. In this section we described in detailed every step of the estimation, we discuss the identification of the structural parameters and the results.
+\subsection{Income Processes}
+\begin{table}[H]
+\label{table:income_params}
+\caption{\\Parameters of the Income Processes} % title of Table
+\centering % used for centering table
+\begin{threeparttable}
+\begin{tabular}{@{\extracolsep{5pt}}lcccc}   % centered columns (4 columns)
+\hline \hline%inserts single line
+\ Parameter & Symbol  & Value &   Standard Error\\ [0.45ex] % inserts table
+\hline
+\ $f$'s age return (constant)         & $\iota^f_0$  & -0.383 & MSM & \\[0.45ex]
+\ $f$'s age return (linear component) & $\iota^f_1$         & 0.0244  & MSM & \\[0.45ex]
+\ $f$'s age return (squared component)               & $\iota^f_2$       & -0.0005 & MSM & \\[0.45ex]
+\ Variance of $f$'s permanent income shock                                 & $\sigma_\zeta^{2_f}$             & 0.0399  & MSM & \\[0.45ex]
+\ $m$'s age return (constant)         & $\iota^m_0$  & -0.342 & MSM & \\[0.45ex]
+\ $m$'s age return (linear component) & $\iota^m_1$         & 0.0495  & MSM & \\[0.45ex]
+\ $m$'s age return (squared component)               & $\iota^m_2$       & -0.0009 & MSM & \\[0.45ex]
+\ Variance of $m$'s permanent income shock                                 & $\sigma_\zeta^{2_m}$             & 0.0417  & MSM & \\[0.45ex]
+\hline
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize{\item \textsc{Notes}: The parameters are estimated using nonlinear least squares using single, cohabiting and married males and females from the PSID. Standard errors are computed by bootstrap.}
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+\FloatBarrier
+\subsection{Preset Parameters}
+This section describes how we choose the parameters that set externally from the model. In the model we assume agents to start making decisions at age $20$, while they retire at 65 and die with probability $1$ at age $82$. Each period in the model lasts $1$ year: we chose this length balancing the benefits of having a short period, which fits the fact that cohabitation spells are particularly short, and the computational burden associated with having too many periods. We chose the relative risk aversion $\gamma$ of private goods and the discount factor $\beta$ to be those in \cite{attanasio2008}, while the relative risk aversion of public goods $\xi$ is taken from \cite{greenwood2016}. Instead the parameters relative to the production of public goods, $\nu$ and $\kappa$ are those in \cite{mcgrattan1997}. The annual interest rate is set to $3\%$. The unexplained variance of male and female's earnings at age $20$ $\sigma_{\zeta,1}^{2_m}$ and $\sigma_{\zeta,1}^{2_f}$ are taken directly from the PSID data, as well as the variance in the labor earning of the partner at meeting, which is denoted by $\sigma^2_{\tilde{p}}$. Instead, the variance in the assets owned by the partner at meeting $\sigma^2_{\hat{p}}$ is taken from the ACS.
+
+\begin{table}[H]
+\caption{\\Preset Parameters} % title of Table
+\label{table:preset_params}
+\centering % used for centering table
+\begin{threeparttable}
+\begin{tabular}{@{\extracolsep{5pt}}lccc}   % centered columns (4 columns)
+\hline \hline 
+ Estimated Parameters & Symbol & Value & Source  \\ [0.45ex] % inserts table
+\hline
+ Initial age              &          & 20  &  \\[0.45ex]
+ Retirement age           &    $T_R$      & 65  &  \\[0.45ex]
+ Age at death             &     $T$     & 82  &  \\[0.45ex]
+ Years per period         &          & 1  &  \\[0.45ex]
+% Retirement income        &          & 0.61 &  \\[0.45ex]
+ Interest rate            &$R-1$       & 0.03 &  \\[0.45ex]
+ $m'$s average earnings in $t=1$      &       & 1 & Normalization \\[0.45ex]
+ Var. partner's asset at meeting             &$\sigma^2_{\hat{p}}$       & 0.01 & ACS\\ [0.45ex]
+ Var. partner's productivity    at meeting        &$\sigma^2_{\tilde{p}}$       & 0.16 & PSID \\[0.45ex]
+  Var. $f$'s productivity in $t=1$&$\sigma_{\zeta,1}^{2_f}$       & 0.41 & PSID \\[0.45ex]
+   Var. $m$'s productivity   $t=1$  &$\sigma_{\zeta,1}^{2_m}$       & 0.40 & PSID \\[0.45ex]
+ Relarive Risk Aversion private good   &$\gamma$  & 1.5 &\cite{attanasio2008}  \\[0.45ex]
+ Discount factor          &$\beta$   & 0.98&\cite{attanasio2008}  \\[0.45ex]
+ Relarive Risk Aversion public good          &$\xi$   & 3.11& \cite{greenwood2016}  \\[0.45ex]
+\hline \hline
+ Function &Symbol & Value & Source  \\ [0.45ex] % inserts table
+ \hline 
+$Q_t=[d_t^\nu+\kappa {(1-P^f_t)}^\nu]^{\frac{1}{\nu}}$& 
+\begin{tabular}{@{}c@{}}$\kappa$ \\[0.25ex] $\nu$\end{tabular} &\begin{tabular}{@{}c@{}}3.76 \\[0.25ex] 0.19\end{tabular}  &  \begin{tabular}{@{}c@{}} \cite{mcgrattan1997} \\[0.25ex] \cite{mcgrattan1997}\end{tabular}  \\[0.95ex]
+\hline
+\end{tabular}
+\end{threeparttable}
+\end{table}
+\FloatBarrier
+
+
+\subsection{Method of Simulated Moments}
+\subsection{Identification}
+\subsection{Results}
+
+%Table of deep parameters
+\begin{table}[H]
+\caption{\\Estimated Structural Parameters} % title of Table
+\label{table:structural_params}
+\centering % used for centering table
+\begin{threeparttable}
+\begin{tabular}{@{\extracolsep{5pt}}lccc}   % centered columns (4 columns)
+\hline \hline%inserts single line
+\ Estimated Parameters &  & Value &  \\ [0.45ex] % inserts table
+\hline
+\ Standard deviation of match quality shock         & $\sigma_{\psi}$  & 0.18 & MSM \\[0.45ex]
+\ Standard deviation of initial match quality shock & $\sigma_{\psi,I}$         & 0.21  & MSM \\[0.45ex]
+\ Probability of meeting a partner               & $\lambda$       & -3.55 & MSM \\[0.45ex]
+\ Divorce cost                                 & $\sigma$             & 0.20  & MSM \\[0.45ex]
+\ Weight of public good               & $\alpha$             & 0.18 & MSM \\[0.45ex]
+\ Loss in productivity while not working               & $\mu$             & 0.21 & MSM \\[0.45ex]
+\hline
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize{\item \textsc{Notes}: The parameters in the table are estimated using the method of simulated moments.}
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+\FloatBarrier
+
 \section{Counterfactual Experiments}
 \section{Welfare Analysis}
 \section{Conclusion}
@@ -437,11 +662,61 @@ This framework is a natural extension of the nash bargaining problem\footnote{No
 \bibliography{mybibliography}
 
 \appendix
+
+\section*{Appendix}
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
-\section*{Appendix}
 \section{Computational Appendix}
 \cite{arnoud2019}+\cite{cartis2019}
 \section{Estimation of Income Processes}
+\section{Robustness Checks - Empircal Analysis}
+\subsubsection*{Relationship Choice - Linear State Trends}
+
+%RELATIONSHIP CHOICE
+	\begin{table}[htbp]\centering
+	\caption{\\OLS Regression. Observation: first and second relationships}
+	\label{table:wmarlin}
+	\begin{threeparttable}[t]\centering
+	\input{wmarlin.tex}
+	\begin{tablenotes}[flushleft]
+	\footnotesize{\item \textsc{Notes}: standard errors are clustered at the state level.
+		Coefficients that are significantly different from zero are denoted by the following system: *10\%, **5\%  and ***1\%.}
+	\end{tablenotes}
+	\end{threeparttable}
+	\end{table}
+
+\subsubsection*{Relationship Choice - Heterogeneity by Propoerty regime and linear state trends}
+
+%RELATIONSHIP CHOICE
+
+	\begin{table}[htbp]\centering
+	\caption{\\OLS Regression. Observation: first and second relationships}
+	\label{table:wmarlinc}
+	\begin{threeparttable}[t]\centering
+	\input{wmarlinc.tex}
+	\begin{tablenotes}[flushleft]
+	\footnotesize{\item \textsc{Notes}: standard errors are clustered at the state level.
+		Coefficients that are significantly different from zero are denoted by the following system: *10\%, **5\%  and ***1\%.}
+	\end{tablenotes}
+	\end{threeparttable}
+	\end{table}
+
+
+\FloatBarrier
+\subsubsection*{Relationship Choice - Logit}
+
+%RELATIONSHIP CHOICE
+	\begin{table}[htbp]\centering
+	\caption{\\Logitstic regression. Observation: first and second relationships}
+	\label{table:wmar_logit}
+	\begin{threeparttable}[t]\centering
+	\input{wmar_logit.tex}
+	\begin{tablenotes}[flushleft]
+	\footnotesize{\item \textsc{Notes}: standard errors are clustered at the state level.
+		Coefficients that are significantly different from zero are denoted by the following system: *10\%, **5\%  and ***1\%.}
+	\end{tablenotes}
+	\end{threeparttable}
+	\end{table}
+
 
 \end{document}
