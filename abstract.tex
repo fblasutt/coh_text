@@ -1,0 +1,230 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+\documentclass[12pt]{article}
+\usepackage[round, sort , authoryear]{natbib}
+
+
+%required by R
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage[normalem]{ulem}
+\usepackage[normalem]{ulem}
+\usepackage[utf8]{inputenc}
+\usepackage{makecell}
+\usepackage{xcolor}
+\usepackage{dcolumn}
+\usepackage{mathtools}% http://ctan.org/pkg/mathtools
+
+
+%Fort title position
+\usepackage{titling}
+
+%For new line in table
+\usepackage{array}
+\usepackage{makecell}
+
+\renewcommand\theadalign{bc}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+
+%Write a vecor
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+
+%New environments
+\newtheorem{lemma}{Lemma}
+\newtheorem{assumption}{Assumption}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newenvironment{proof}[1][Proof]{\noindent \textbf{#1.} }{\  \rule{0.5em}{0.5em}}
+
+%For tables position
+\usepackage{float}
+\restylefloat{table}
+
+
+%%% PAGE DIMENSIONS
+\usepackage[margin=2.5 cm]{geometry}
+\usepackage{blindtext} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage[utf8]{inputenc} 
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{epstopdf}
+\usepackage[hang]{footmisc}
+\usepackage{lipsum}
+\usepackage{setspace}
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.13}
+\usepackage{caption}
+\usepackage{threeparttablex}
+\usepackage{color, colortbl}
+\definecolor{Gray}{gray}{0.9}
+%%% PACKAGES
+\usepackage{placeins}
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+% These packages are all incorporated in the memoir class to one degree or another...
+\usepackage{amsmath}
+\numberwithin{table}{section}
+\usepackage{cases}
+\usepackage{graphicx}
+%
+\usepackage{float}
+\usepackage{authblk}
+\usepackage{pgfplots}
+\usepackage{pdfpages}
+\linespread{1.5}
+\setlength{\footnotemargin}{4mm}
+\usepackage{amssymb} 
+\usepackage{tabularx}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\addtolength{\footnotesep}{2mm} % change to 1mm
+
+%For Counting Figures in the Appendix
+\usepackage{chngcntr}
+
+%No Counting within section
+\DeclareCaptionLabelSeparator{none}{}
+\captionsetup{labelsep=none}
+\counterwithout{figure}{section}
+\counterwithout{table}{section}
+
+
+%Nice Figure and table headers
+\captionsetup[figure]{labelfont={sc},name={Figure},labelsep=period}
+\captionsetup[table]{labelfont={sc},name={Table},labelsep=period,justification=centering}
+
+%For subtables
+\usepackage{subcaption}
+
+%For having the catption above tables
+\usepackage{float}
+\floatstyle{plaintop}
+\restylefloat{table}
+
+%For bar charts in table
+\newlength\MAX  \setlength\MAX{40mm}
+\newcommand*\Chart[1]{#1~\rlap{\textcolor{blue!20}{\rule{#1\MAX}{2ex}}}}
+%\newcommand*\Chartguys[1]{\rlap{\textcolor{blue!30}{\rule{6ex}{\MAX}}}{\textcolor{white!30}{\rule{6ex}{#1\MAX}}}}
+%\newcommand*\Chartgirls[1]{\rlap{\textcolor{red!30}{\rule{6ex}{\MAX}}}{\textcolor{white!30}{\rule{6ex}{#1\MAX}}}}
+\newcommand*\Chartguys[1]{{\textcolor{blue!30}{\rule{6ex}{#1\MAX}}}}
+\newcommand*\Chartgirls[1]{{\textcolor{red!30}{\rule{6ex}{#1\MAX}}}}
+
+%Math stuff
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=BibTeX}
+%TCIDATA{LastRevised=Monday, August 27, 2018 20:06:51}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\restylefloat{table}
+\oddsidemargin  +0.18in
+\evensidemargin +0.18in
+\topmargin 40pt \textheight 8.1in \textwidth 6.5in
+\linespread{1.5}\parskip .05in
+
+
+
+
+
+
+%Nice Figure and table headers
+\captionsetup[figure]{labelfont={sc},name={Figure},labelsep=none}
+\captionsetup[table]{labelfont={sc},name={Table},labelsep=none,justification=centering}
+
+\usepackage{booktabs}   % for nice tables
+\usepackage[colorlinks=false, linktocpage=true]{hyperref}
+%\usepackage[flushmargin]{footmisc}
+%\addtolength{\footnotesep}{3mm} % change to 1mm
+\hypersetup{
+	colorlinks,
+	linkcolor={blue!50!black},
+	citecolor={blue!50!black},
+	urlcolor={blue!80!black}
+}
+% use for hypertext
+\usepackage[colorinlistoftodos]{todonotes}
+\setlength{\marginparwidth}{2cm}
+\newenvironment{customlegend}[1][]{%
+	\begingroup
+	% inits/clears the lists (which might be populated from previous
+	% axes):
+	\pgfplots@init@cleared@structures
+	\pgfplotsset{#1}%
+}{%
+	% draws the legend:
+	\pgfplots@createlegend
+	\endgroup
+}%
+%For Figures, below
+
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepgflibrary{arrows} % LATEX and plain TEX and pure pgf
+\usepgflibrary[arrows] % ConTEXt and pure pgf
+\usetikzlibrary{arrows} % LATEX and plain TEX when using Tik Z
+\usetikzlibrary[arrows] % ConTEXt when using Tik Z
+\usepackage{hyperref}
+
+
+
+%%% The "real" document content comes below...
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\parskip3mm\parindent0cm
+\setlength{\droptitle}{-10em}   % This is your set screw
+
+\title{Unilateral Divorce and the Rise of Informal Cohabitation\thanks{The authors wish to thank Matthias Doepke, Alessandra Voena and the Norhtwestern Macro group for their useful comments. Blasutto acknowledges financial support from the French speaking community of Belgium (ARC project 15/19-063 on "family transformations").}}
+\author{Fabio Blasutto$^1$ (Presenter) \quad Egor Kozlov$^2$}
+
+\begin{document}
+	 	\tikzstyle{block} = [draw, fill=white, rectangle, 
+	minimum height=3em, minimum width=6em]
+	\tikzstyle{sum} = [draw, fill=white, circle, node distance=1cm]
+	\tikzstyle{input} = [coordinate]
+	\tikzstyle{output} = [coordinate]
+	\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+	
+	
+	%Gauss distribution
+	\pgfmathdeclarefunction{gauss}{2}{%
+		\pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+	}
+	% Bibliography style, important for biblatex functioning	
+	\bibliographystyle{apa}
+	
+	\maketitle
+
+	\footnotetext[1]{IRES, UCLouvain \& National Fund for Scientific Research (Belgium). Email:  \tt{fabio.blasutto@uclouvain.be}, Phone:\tt{+32 489545996}, Address: \tt{Chaussee de Wavre 561/2, Etterbeek, Belgium.}}
+	\footnotetext[2]{Northwestern Univrsity. Email:  \tt{egorkozlov2020@u.northwestern.edu}.\\}
+	
+\begin{abstract}
+	Does unilateral divorce eroded the gains of marriage with respect to informal cohabitation? Exploiting the staggered introduction of unilateral divorce across U.S. states, we show that after the reform newly formed relationships are 5\% more likely to be cohabitations instead of marriages, and that cohabitation spells last longer. To understand the mechanisms underlying the law changes, we build and estimate a structural life cycle model with partnership choice, female labor supply and savings decisions, where the gains of marriage with respect to cohabitation come from a better risk sharing and specialization within the household, enforced through a costly divorce. In the model the reform increases the risk of divorce, making cohabitation preferred to couples that would have had the highest risk of divorce. Since the couples switching relationship are on average better matched than the average cohabitants, the duration of cohabitations increases.
+\end{abstract}
+\textbf{Keywords}: Marriage, Cohabitation, Unilateral Divorce, Structural Estimation\\
+\textbf{JEL-Code}: D83 - J12
+
+\end{document}

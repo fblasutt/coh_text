@@ -1,0 +1,19 @@
+
+
+\begin{tikzpicture}[domain=0:1,scale=1]
+\node [block, name=input,align=center] (sum) {\large Single};
+\node [block, above right=1.5cm and 7.449cm of sum ] (controller) {\large Separation};
+\node [block, below right=1.5cm and 7.449cm of controller,align=center] (system) {\large Cohabitation};
+\draw [<-,  thick, latex-] (controller) -- node[above left,yshift=0.3cm]{\large }(system);
+\node [output, right of=system] (output) {fe};
+\node [block, below left=1.5cm and 7.449cm of system,align=center] (measurements) {\large Marriage };
+\node [block, left of=measurements, node distance=10.05cm,align=left] (divorce) {\large Divorces};
+\draw [<-,  thick, latex-] (sum) -- node[above right,yshift=0.3cm]{\large } (controller);
+\draw [->,  thick, -latex] (sum) -- node[above]{\large} (system);
+\draw [->,  thick, -latex] (system) --node[above left]{\large } (measurements);
+\draw [->,  thick, -latex] (measurements) --node[above]{\large } (divorce);
+\draw [->,  thick, -latex] (sum) --node[above right]{\large } (measurements);
+\draw [->,  thick, -latex] (divorce) --node[right]{\large } (sum);
+node [near end] {$$} (sum);
+\end{tikzpicture}
+

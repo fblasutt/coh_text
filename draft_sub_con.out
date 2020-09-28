@@ -1,12 +1,12 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{US Divorce Laws: an Overview}{}% 2
+\BOOKMARK [1][-]{section.2}{US Divorce and Cohabitation Laws: an Overview}{}% 2
 \BOOKMARK [1][-]{section.3}{Data and Empirical Evidence}{}% 3
-\BOOKMARK [2][-]{subsection.3.1}{The Dataset}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.1}{Dataset}{section.3}% 4
 \BOOKMARK [2][-]{subsection.3.2}{Empirical Evidence}{section.3}% 5
-\BOOKMARK [1][-]{section.4}{The Model}{}% 6
+\BOOKMARK [1][-]{section.4}{Theory}{}% 6
 \BOOKMARK [2][-]{subsection.4.1}{Preferences}{section.4}% 7
-\BOOKMARK [2][-]{subsection.4.2}{Home Production}{section.4}% 8
-\BOOKMARK [2][-]{subsection.4.3}{Wages}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.2}{Wages}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.3}{Home Production}{section.4}% 9
 \BOOKMARK [2][-]{subsection.4.4}{Budget Constraints}{section.4}% 10
 \BOOKMARK [2][-]{subsection.4.5}{Problem of the Singles}{section.4}% 11
 \BOOKMARK [2][-]{subsection.4.6}{Household Planning Problem}{section.4}% 12
@@ -14,12 +14,18 @@
 \BOOKMARK [1][-]{section.5}{Estimation}{}% 14
 \BOOKMARK [2][-]{subsection.5.1}{Income Processes}{section.5}% 15
 \BOOKMARK [2][-]{subsection.5.2}{Preset Parameters}{section.5}% 16
-\BOOKMARK [2][-]{subsection.5.3}{Method of Simulated Moments}{section.5}% 17
+\BOOKMARK [2][-]{subsection.5.3}{Indirect Inference}{section.5}% 17
 \BOOKMARK [2][-]{subsection.5.4}{Identification}{section.5}% 18
-\BOOKMARK [2][-]{subsection.5.5}{Results}{section.5}% 19
-\BOOKMARK [1][-]{section.6}{Counterfactual Experiments}{}% 20
-\BOOKMARK [1][-]{section.7}{Welfare Analysis}{}% 21
-\BOOKMARK [1][-]{section.8}{Conclusion}{}% 22
-\BOOKMARK [1][-]{appendix.A}{Computational Appendix}{}% 23
-\BOOKMARK [1][-]{appendix.B}{Estimation of Income Processes}{}% 24
-\BOOKMARK [1][-]{appendix.C}{Robustness Checks - Empircal Analysis}{}% 25
+\BOOKMARK [2][-]{subsection.5.5}{Model Fit}{section.5}% 19
+\BOOKMARK [1][-]{section.6}{Mechanisms}{}% 20
+\BOOKMARK [1][-]{section.7}{Welfare}{}% 21
+\BOOKMARK [1][-]{section.8}{Counterfactual Experiments}{}% 22
+\BOOKMARK [1][-]{section.9}{Conclusion}{}% 23
+\BOOKMARK [1][-]{appendix.A}{Net worth around divorce/breakup}{}% 24
+\BOOKMARK [1][-]{appendix.B}{Computational Appendix}{}% 25
+\BOOKMARK [1][-]{appendix.C}{Estimation of Income Processes}{}% 26
+\BOOKMARK [1][-]{appendix.D}{Robustness Checks - Empirical Analysis}{}% 27
+\BOOKMARK [1][-]{appendix.E}{Figures}{}% 28
+\BOOKMARK [2][-]{subsection.E.1}{Model Fit}{appendix.E}% 29
+\BOOKMARK [2][-]{subsection.E.2}{Mechanisms}{appendix.E}% 30
+\BOOKMARK [2][-]{subsection.E.3}{Simulations-Symmetry}{appendix.E}% 31

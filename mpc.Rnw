@@ -2,25 +2,22 @@
 \begin{tabular}{@{\extracolsep{5pt}}lcccc} 
 \\[-1.8ex]\hline 
 \hline 
-\\[-1.8ex] & \multicolumn{1}{c}{Full Sample} & \multicolumn{1}{c}{Resident}& \multicolumn{1}{c}{NSFH}& \multicolumn{1}{c}{NSFG} \Writing to file mpc.tex
-Processing code chunks with options ...
-
-You can now run (pdf)latex on ‘mpc.tex’
-}{c}{(4)}\\ 
+\\[-1.8ex] & \multicolumn{1}{c}{Full Sample} & \multicolumn{1}{c}{Resident}& \multicolumn{1}{c}{NSFH}& \multicolumn{1}{c}{NSFG} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)}\\ 
 \hline \\[-1.8ex] 
 \\[-2.2ex] & \multicolumn{4}{c}{Risk of Marriage relative to Cohabitation} \\  
  \hline \\[-1.8ex]
- Unilateral Divorce &  -0.09  &  -0.07  &  -0.12  &  -0.13  \\ 
-  & ( 0.04 ) & ( 0.04 ) & ( 0.04 ) & ( 0.11 ) \\  
+ Unilateral Divorce &  -0.24  &  -0.25  &  -0.28  &  -0.28  \\ 
+  & ( 0.06 ) & ( 0.08 ) & ( 0.09 ) & ( 0.09 ) \\  
  \hline \\[-1.8ex]
- Average Relative Risk &  -0.12  &  -0.08  &  -0.2  &  -0.14  \\ 
+ Average Relative Risk &  0.64  &  0.63  &  0.59  &  0.6  \\ 
  \hline \\[-1.8ex]
  \\[-2.2ex] & \multicolumn{4}{c}{Risk of Separation relative to Cohabitation} \\  
  \hline \\[-1.8ex]
- Unilateral Divorce &  -0.04  &  -0.09  &  -0.05  &  -0.06  \\ 
-  & ( 0.02 ) & ( 0.02 ) & ( 0.02 ) & ( 0.1 ) \\  
+ Unilateral Divorce &  -0.19  &  -0.16  &  -0.08  &  -0.24  \\ 
+  & ( 0.07 ) & ( 0.06 ) & ( 0.05 ) & ( 0.14 ) \\  
  \hline \\[-1.8ex]
- Average Relative Risk &  -0.06  &  -0.18  &  -0.1  &  -0.06  \\ 
+ Average Relative Risk &  0.67  &  0.71  &  0.83  &  0.62  \\ 
  \hline \\[-1.8ex]
 State Fixed effects & Yes & Yes & Yes & Yes \\ 
 Year Fixed effects & Yes & Yes & Yes & Yes \\ 
