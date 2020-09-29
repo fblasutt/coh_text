@@ -8,3 +8,9 @@
 *.blg
 
 *.log
+
+.DS_Store
+
+*.synctex(busy)
+
+*.out
