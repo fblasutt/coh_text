@@ -213,7 +213,7 @@
 %\parskip3mm\parindent0cm
 
 
-\title{(Changing) Marriage and Cohabitation Patterns in the US: do Divorce Laws Matter?\thanks{The authors wish to thank Edoardo Ciscato, David de la Croix, Matthias Doepke, Philipp Kircher, Fabio Mariani, Jesús Fernández-Villaverde, Luca Pensieroso, Alessandra Voena, as well as all the participants at seminars that took place in Northwestern University, UCLouvain, KU Leuven and the University of Michigan. Computational resources were provided by the supercomputing facilities of the Université catholique de Louvain (CISM/UCL) and Northwestern University. Blasutto acknowledges financial support from the French speaking community of Belgium (ARC project 15/19-063 on \textit{family transformations} and \textit{mandat d' aspirant} FC 23613).}}
+\title{(Changing) Marriage and Cohabitation Patterns in the US: do Divorce Laws Matter?\thanks{The authors wish to thank Edoardo Ciscato, David de la Croix, Matthias Doepke, Philipp Kircher, Fabio Mariani, Jesús Fernández-Villaverde, Alessandra Voena, as well as all the participants at seminars that took place in Northwestern University, UCLouvain, KU Leuven and the University of Michigan. Computational resources were provided by the supercomputing facilities of the Université catholique de Louvain (CISM/UCL) and Northwestern University. Blasutto acknowledges financial support from the French speaking community of Belgium (ARC project 15/19-063 on \textit{family transformations} and \textit{mandat d' aspirant} FC 23613).}}
 \author{\large Fabio Blasutto$^1$ \quad Egor Kozlov$^2$}
 \date{}
 
@@ -1202,127 +1202,23 @@ We adapt the original algorithm such that it can be run in parallel using $M$ no
 \FloatBarrier
 
 \FloatBarrier
-
-\subsubsection*{Relationship Choice - California left out of sample}
-
-%RELATIONSHIP CHOICE
-\begin{table}[H]\centering
-	\caption{\\OLS regression. Observation: first and second relationships. California dropped from initial sample}
-	\label{table:wmar_c}
-	\begin{threeparttable}[t]\centering
-		\input{wmar_c.tex}
-		\begin{tablenotes}[flushleft]
-			\footnotesize{\item \textsc{Notes}: standard errors are clustered at the state level.
-				Coefficients that are significantly different from zero are denoted by the following system: *10\%, **5\%  and ***1\%.}
-		\end{tablenotes}
-	\end{threeparttable}
-\end{table}
-\FloatBarrier
-
-\subsubsection*{Relationship Choice - Heterogeneity by Property regime and California left out of sample}
+\subsubsection*{Relationship Choice - Logit}
 
 %RELATIONSHIP CHOICE
-\begin{table}[H]\centering
-	\caption{\\OLS regression. Observation: first and second relationships. California dropped from initial sample}
-	\label{table:wmarc_c}
+	\begin{table}[H]\centering
+	\caption{\\Logitstic regression. Observation: first and second relationships}
+	\label{table:wmar_logit}
 	\begin{threeparttable}[t]\centering
-		\input{wmarc_c.tex}
-		\begin{tablenotes}[flushleft]
-			\footnotesize{\item \textsc{Notes}: standard errors are clustered at the state level.
-				Coefficients that are significantly different from zero are denoted by the following system: *10\%, **5\%  and ***1\%.}
-		\end{tablenotes}
+	\input{wmar_logit.tex}
+	\begin{tablenotes}[flushleft]
+	\footnotesize{\item \textsc{Notes}: standard errors are clustered at the state level.
+		Coefficients that are significantly different from zero are denoted by the following system: *10\%, **5\%  and ***1\%.}
+	\end{tablenotes}
 	\end{threeparttable}
-\end{table}
+	\end{table}
 \FloatBarrier
 
-
-
-
-
-\subsubsection*{Relationship Choice - Multinomial Logit}
-The
-\begin{table}[H]\centering
-	\caption{\\Multinomial Logit. Observation: person month, the choices are: staying single, marry or cohabit}
-	\label{table:wmar_mlogit}
-	\begin{threeparttable}[t]\centering
-		\input{wmar_mlogit.tex}
-		\begin{tablenotes}[flushleft]
-			\footnotesize{\item \textsc{Notes}: standard errors are clustered at the state level. The numbers displayed in the table are the $exp$ of the coefficient of the multinomial logit and they indicate the relative risk of cohabiting with respect to marrying. When these number are larger than $1$ the regressor of interest is associated with an relative increase in the risk of cohabiting.
-				Relative risks that are significantly different from zero are denoted by the following system: *10\%, **5\%  and ***1\%.}
-		\end{tablenotes}
-	\end{threeparttable}
-\end{table}
-\FloatBarrier
-\subsubsection*{Relationship Choice - Event Study}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Symmetry in income and assets
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
-	\begin{center}
-		\caption{\\Event studies on share of couples choosing marriage instead of cohabitation, around the introduction of unilateral divorce}
-		\label{fig:estud}
-		
-		\begin{subfigure}{.49\textwidth}
-			\centering
-			% include first image
-			\caption{Full sample}
-			\label{fig:ev1}
-			\scalebox{0.5}{\input{event_1.pgf} } 
-		\end{subfigure}
-		\begin{subfigure}{.49\textwidth}
-			\centering
-			% include second image
-			\caption{Resident}
-			\label{fig:ev2}
-			\scalebox{0.5}{\input{event_2.pgf} } 
-		\end{subfigure}
-	\end{center}
-	
-	\hspace{20em}
-	
-	\begin{center}
-		\begin{subfigure}{.49\textwidth}
-			\centering
-			% include second image
-			\caption{NSFH}
-			\label{fig:ev3}
-			\scalebox{0.5}{\input{event_3.pgf} } 
-		\end{subfigure}
-		\begin{subfigure}{.49\textwidth}
-			\centering
-			% include second image
-			\caption{NSFG}
-			\label{fig:ev4}
-			\scalebox{0.5}{\input{event_4.pgf} } 
-		\end{subfigure}
-	\end{center}
-	
-	\begin{minipage}{0.99\textwidth} % choose width suitably
-		{\footnotesize \textsc{Notes.}. \par}
-	\end{minipage}
-\end{figure}
-\FloatBarrier
-
-
-\subsubsection*{Relationship Choice and Children}
-Is there a shift towards cohabitation for both childless couples and couples with children? Using the NSFH sample, in table \ref{table:wmarc_chil} below we shows that unilateral divorce is associated with a shift towards cohabitation both for couples whose respondent has some children, is childless or is childless and does not want to have children. The shift towards cohabitation is lower in absolute value for couples whose respondent has children. This can be due to the fact that marriage remains the best partnership for enhancing cooperation, one desirable feature for couples with children since they require large investments in terms of time and money. This heterogeneity will be captured by our model: couples with a high relationship quality will be less sensible to the changes in the law and are also more likely to produce large quantities of the public good, which also represents children.
-
-%RELATIONSHIP CHOICE
-\begin{table}[H]\centering
-	\caption{\\OLS regression. Observation: first and second relationships.}
-	\label{table:wmarc_chil}
-	\begin{threeparttable}[t]\centering
-		\input{wmar_chil.tex}
-		\begin{tablenotes}[flushleft]
-			\footnotesize{\item \textsc{Notes}: standard errors are clustered at the state level.
-				Coefficients that are significantly different from zero are denoted by the following system: *10\%, **5\%  and ***1\%.}
-		\end{tablenotes}
-	\end{threeparttable}
-\end{table}
-\FloatBarrier
-
-%\newpage
+\newpage
 
 \section{Figures}
 
@@ -1416,6 +1312,20 @@ Is there a shift towards cohabitation for both childless couples and couples wit
 \label{fig:psidist}
 \resizebox{0.8\textwidth}{!}{\input{psidist.pgf}}
 
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\caption{\\Distribution of women Pareto weight $\theta$---marriage and cohabitation}
+\label{fig:thetadist}
+\hspace*{-1.1cm} 
+\resizebox{0.8\textwidth}{!}{\input{thtdist.pgf}}
+\begin{minipage}{0.99\textwidth} % choose width suitably
+
+\hspace{30em}
+
+{\footnotesize \textsc{Notes.} This figure depicts the distribution women Pareto weight for married and cohabiting couples. The thick solid lines represent the distribution of this variable in the period the couple decides to get together, while the lighter areas depict the distribution of $\theta$ considering every relationship duration.\par}
+\end{minipage}
 \end{figure}
 \FloatBarrier
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1553,18 +1463,66 @@ Is there a shift towards cohabitation for both childless couples and couples wit
 \FloatBarrier
 \endgroup
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Symmetry in income and assets
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Simulations-Symmetry}
+\begin{figure}[ht]
+	\begin{center}
+		\caption{\\ Log Income and assets mean and variances by age---simulated data}
+		\label{fig:symmetry}
+		
+		\begin{subfigure}{.49\textwidth}
+			\centering
+			% include first image
+			\caption{Average productivity}
+			\label{fig:ev1}
+			\scalebox{0.5}{\input{event_1.pgf} } 
+		\end{subfigure}
+		\begin{subfigure}{.49\textwidth}
+			\centering
+			% include second image
+			\caption{Variance productivity}
+			\label{fig:ev2}
+				\scalebox{0.5}{\input{event_2.pgf} } 
+		\end{subfigure}
+	\end{center}
+	
+	\hspace{20em}
+	
+	\begin{center}
+		\begin{subfigure}{.49\textwidth}
+			\centering
+			% include second image
+			\caption{Variance assets}
+			\label{fig:ev3}
+            \scalebox{0.5}{\input{event_3.pgf} } 
+		\end{subfigure}
+		\begin{subfigure}{.49\textwidth}
+			\centering
+			% include second image
+			\caption{Variance assets}
+			\label{fig:ev4}
+            \scalebox{0.5}{\input{event_4.pgf} } 
+		\end{subfigure}
+	\end{center}
+	
+	\begin{minipage}{0.99\textwidth} % choose width suitably
+		{\footnotesize \textsc{Notes.} The figures display means and variances of simulated log wages and assets of men and women in a couple over their age. We label as ``main person" the variables that are computed from agents that are simulated and followed through their whole life-cycle, while we label as ``met person" the variables constructed using the partners met by the people whose behavior is simulated for their whole life-cycle. Wage variables are constructed using couples at any point of their relationship, while for assets we use only the period the couple met, where we can still distinguish the title of ownership of assets. \par}
+	\end{minipage}
+\end{figure}
+\FloatBarrier
 
 
 \begin{figure}[ht]
 	\begin{center}
-		\caption{\\ Newly formed relationships (either married or cohabiting) and unilateral divorce (U.D.)}
+		\caption{\\ Relationships (Marriage vs. Cohabitation) and Unilateral Divorce (U.D.)}
 		\label{fig:events_raw}
 		
 		\begin{subfigure}{.49\textwidth}
 			\centering
 			% include second image
-			\caption{{\color{blue}\% new couples choosing marriage instead of cohabitation} and {\color{red}\% relationships born under U.D.} }
+			\caption{Marriage prevalence and diffusion of U.D. }
 			
 			\label{fig:years_raw}
 			\scalebox{0.5}{\input{years_raw.pgf} } 
@@ -1572,7 +1530,7 @@ Is there a shift towards cohabitation for both childless couples and couples wit
 		\begin{subfigure}{.49\textwidth}
 			\centering
 			% include first image
-			\caption{\% new couples choosing marriage instead of cohabitation around U.D.}
+			\caption{Marriage prevalence around U.D.}
 			\label{fig:event_raw}
 			\scalebox{0.5}{\input{event_raw.pgf} } 
 		\end{subfigure}
@@ -1580,8 +1538,9 @@ Is there a shift towards cohabitation for both childless couples and couples wit
 	\end{center}
 	
 
+	
 	\begin{minipage}{0.99\textwidth} % choose width suitably
-		{\footnotesize \textsc{Notes.} The left panel shows in blue the evolution over time of the \% of relationships born in year $t$ such that the couple chose marriage as opposed to informal cohabitation. The red line represents the \% of relationships born in $t$ in a state that already adopted unilateral divorce by year $t$. The right panel shows the \% of relationships where the couple chose to marry instead of cohabiting in an year whose distance in time from the introduction unilateral divorce in that state is equal to $d$ years. The red dotted lines are obtained running linear regressions on a dummy for marriage, using the event time as the only regressor. All the variables presented in this figure are constructed with a sample of first and second relationships (which can be either marriage or cohabitation) from the 1988 wave of the NSFH: we provide further details about the survey and the sample construction in section 3. All the variables depicted in the two figures are constructed using sample weights. \par}
+		{\footnotesize \textsc{Notes.} The figures display means and variances of simulated log wages and assets of men and women in a couple over their age. We label as ``main person" the variables that are computed from agents that are simulated and followed through their whole life-cycle, while we label as ``met person" the variables constructed using the partners met by the people whose behavior is simulated for their whole life-cycle. Wage variables are constructed using couples at any point of their relationship, while for assets we use only the period the couple met, where we can still distinguish the title of ownership of assets. \par}
 	\end{minipage}
 \end{figure}
 \FloatBarrier
