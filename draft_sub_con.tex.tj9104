@@ -213,7 +213,7 @@
 %\parskip3mm\parindent0cm
 
 
-\title{(Changing) Marriage and Cohabitation Patterns in the US: do Divorce Laws Matter?\thanks{The authors wish to thank Edoardo Ciscato, David de la Croix, Matthias Doepke, Philipp Kircher, Fabio Mariani, Jesús Fernández-Villaverde, Luca Pensieroso, Alessandra Voena, as well as all the participants at seminars that took place in Northwestern University, UCLouvain, KU Leuven and the University of Michigan. Computational resources were provided by the supercomputing facilities of the Université catholique de Louvain (CISM/UCL) and Northwestern University. Blasutto acknowledges financial support from the French speaking community of Belgium (ARC project 15/19-063 on \textit{family transformations} and \textit{mandat d' aspirant} FC 23613).}}
+\title{(Changing) Marriage and Cohabitation Patterns in the US: do Divorce Laws Matter?\thanks{The authors wish to thank David de la Croix, Matthias Doepke, Philipp Kircher, Fabio Mariani, Jesús Fernández-Villaverde, Alessandra Voena and the Northwestern Macro group for their useful comments. Computational resources were provided by the supercomputing facilities of the Université catholique de Louvain (CISM/UCL) and Northwestern University. Blasutto acknowledges financial support from the French speaking community of Belgium (ARC project 15/19-063 on \textit{family transformations} and \textit{mandat d' aspirant} FC 23613).}}
 \author{\large Fabio Blasutto$^1$ \quad Egor Kozlov$^2$}
 \date{}
 
@@ -328,7 +328,7 @@ Another subset of these papers studies the effect of changes in cohabitants' rig
 
 Finally, this paper is tied to the extensive literature that studies the changes in the American household character over the last decades. Various studies explored the role of health improvements, wage distribution and dynamics, norms and technology on the rise in female labor force participation \citep{fernandez2004,greenwood2005,albanesi2016,greenwood2016}, the changes in household formation and dissolution \citep{greenwood2016,ciscato2019}, the rise in positive assortative mating \citep{fernandez2005,greenwood2016,ciscato2019} and the increase in the age at marriage \citep{santos2016}. We extend this literature by showing that the introduction of unilateral divorce implied a rise in cohabitation. Advances in the home production technology and the reduction in the gender wage gap also contributed to the rise.
 
-Our modelling of the decision making in the couple builds on existing literature on limited commitment (\cite{kk1996},  \cite{ligon2002}, \cite{marcet2019} and \cite{pavoni2018}), which has been applied to dynamic collective models in the household by \cite{mazzocco2007}, \cite{mazzocco2013}, \cite{bayot2015}, \cite{rigas2015}, \cite{voena2015}, \cite{abraham2018}, \cite{lise2018}, \cite{low2018}, \cite{foerster2019} and \cite{reynoso2019} among others. The fact that couples cannot commit ex-ante to any possible division of marital surplus contributes to the creation of an imperfectly transferable utility environment, under which the Becker-Coase theorem does not hold (see \cite{galichon2019} and \cite{weber2018}, who applies the theorem to related environments). The imperfect transferability feature is important: according to \cite{becker1977}, divorce laws should not affect separation decisions \textit{``if all compensations between spouses were feasible and costless"}. The assumptions underlying the Becker-Coase theorem are discussed by \cite{chiappori2015} and \cite{fella2004}.
+Our modelling of the decision making in the couple builds on existing literature on limited commitment (\cite{kk1996},  \cite{ligon2002}, \cite{marcet2019} and \cite{pavoni2018}), which has been applied to dynamic collective models in the household by \cite{mazzocco2007}, \cite{mazzocco2013}, \cite{bayot2015}, \cite{rigas2015}, \cite{voena2015}, \cite{abraham2018}, \cite{lise2018}, \cite{low2018}, \cite{foerster2019} and \cite{reynoso2019} among others. The fact that couples cannot commit ex-ante to any possible division of marital surplus contributes to the creation of an imperfectly transferable utility environment, under which the Becker-Coase theorem does not hold (see \cite{galichon2019} and \cite{weber2018}, who applies the theorem to related environments). The imperfect transferability feature is important: according to \cite{becker1977}, divorce laws should not affect separation decisions \textit{``if all compensations between spouses were feasible and costless"}. \cite{chiappori2015} and \cite{fella2004} discuss the assumptions of the Becker-Coase theorem more.
 
 
 The paper is organized as follows. Section 2 offers an overview of US divorce laws. Section 3 documents the effect of introducing unilateral divorce on partnership choices. Section 4 presents and develops the theoretical model. Section 5 describes the model's estimation, while section 6 discusses the main mechanisms of the model. Section 7 reports the results of the welfare analysis. Section 8 performs a series of counterfactual experiments, while Section 9 contains the conclusion.
@@ -861,7 +861,7 @@ Share household income earned by women  &  0.34\% &  0.35\% & [0.36-0.38] \\[0.1
 \end{table}
 
 \section{Mechanisms}
-The aim of this section is 1) to better understand the quantitative relevance of the mechanisms underlying the introduction of unilateral divorce and the subsequent rise of cohabitation and 2) quantify the gains of marriage with respect to cohabitation.
+The aim of this section is to better understand the mechanisms underlying the introduction of unilateral divorce and the subsequent rise in cohabitation.
 
  We start by analyzing how selection and intra-household bargaining change as a result of the reform. The estimated structural model allows us to study the evolution of the match quality $\psi$ and women's Pareto weight $\theta_t$ using a standard event study. Specifically, we estimate the following regression model on simulated data
 \begin{equation}\label{eq:ev_stud}
@@ -905,18 +905,14 @@ Figure \ref{fig:fis2g} reports the results. We normalize the coefficient estimat
 \end{figure}
 \FloatBarrier
 
-\textbf{Risk-Sharing and consumption insurance.}
-The veto over divorce in the mutual consent regime and the higher cost of divorce with respect to breakup are commitment technologies that enforce cooperation within marriage. What is the quantitative relevance of these mechanisms on the ability of married and cohabiting couples to share risk? To answer this question we study how income shocks affect the changes in consumption over time for men in a couple.\footnote{Results for women in a couple are displayed in table \ref{table:riskshf}. We chose to show the results for men in this section since changes in their productivity always translate into changes of disposable income. This does not happen for women who do not participate in the labor market: for this reason results in table \ref{table:riskshf} are largely driven by the different degree of female labor force participation under different divorce regimes and partnership types.} First, we obtain paths of consumption and labor earnings of men who are in their first relationship by simulating their choices under different divorce regimes.\footnote{First relationships correspond to the periods in which an agent spend time in a couple with his or her first partner without changing partnership type. This means that the first relationship of a men than first cohabited and then married his first partner is a cohabitation spell that stops when the couples gets married. We restrict our attention on first relationships only because this allow us to perform an exercise where we impose marriage to a couple that decided to cohabit. This exorcise allows to compare marriage and cohabitation controlling for selection.} Then, for each of these samples we estimate the below equation
-\[\Delta \log c_{it}=\alpha+\mu \Delta \log(w_{it})+\nu_{t}+\epsilon_{it},\]
-where $c_{it}$ and $w_{it}$ are the consumption and the labor earnings of men $i$ at age $t$. $\nu_{t}$ are age fixed effects. Coefficient $\mu$ is informative about how much of the changes in income translate into changes in consumption. Consequently, a low value of $\mu$ corresponds to a high degree of consumption insurance. The results displayed in table \ref{fig:divcons} provide important pieces of information about partnership types and consumption insurance. First, coefficient $\mu$ is the largest for cohabitation and the smallest for marriage under mutual consent divorce as reported in the first row.\footnote{We only consider individuals who spend their whole life-cycle under the same divorce regime.} This means that consumption insurance is the most effective within marriage with mutual consent divorce and the least effective within cohabitation. Does this happen because of a selection effect or because partnership rules directly affect the ability to share risk? Rows 2 and 3 of table \ref{fig:divcons} suggest that selection matters: marriages that were not preceded by cohabitation display a stronger degree of consumption insurance than those that were preceded by cohabitation. The reason is that the initial match quality of couples that married directly is higher compared to those who first cohabited. The fact that match quality is higher  implies that participation constraints bind more rarely, allowing for a smoother consumption path. Row 4 of table \ref{fig:divcons} shows that if we ``force" to marry men that had chosen to cohabit, we obtain that the amount of consumption insurance lies in between that of marriage and cohabitation. Since this experiment controls for selection, we conclude that partnership rules have a direct effect on couples' ability to share risk. The results relative to consumption insurance are partnership types are driven by the frequency at which Pareto weights are renegotiated. Consistently with these results, figure \ref{fig:thch} shows that the share of periods in which Pareto weights are renegotiated is higher for cohabitation than marriage, and that only some of this difference can be explained by selection. This suggest that consumption insurance is tightly link with the frequency at which the couples renegotiates the way resources are shared.\\
-
+\textbf{Match quality $\psi$.}
 %%%%%%%%%%%%%%%%%%%%%%%
 %Table of risk sharing
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begingroup
 \renewcommand{\arraystretch}{1.3}
 \begin{table}[h]\centering
-	\caption{\\Partnership type and consumption insurance against income shocks}
+	\caption{\\Logitstic regression. Observation: first and second relationships}
 	\label{table:risksh}
 	\begin{threeparttable}[t]\centering
 		\begin{tabular}{@{\extracolsep{15pt}}lccc} 
@@ -928,28 +924,20 @@ where $c_{it}$ and $w_{it}$ are the consumption and the labor earnings of men $i
 			\cline{2-3} \cline{4-4} 
 			& M.C. & U.D. &  \\ 
 			\hline 
-			Baseline & 0.450 & 0.484 &  0.498 \\ 
-			Only marriages preceded by cohabitation  & 0.454 & 0.486 & -  \\
-			Only marriages not preceded by cohabitation  & 0.449 & 0.483 & -  \\
-			Marriages with cohabitation selection & 0.468 & 0.496 & -  \\
+			Baseline & 0.380 & 0.382 &  0.468 \\ 
+			Only marriages preceded by cohabitation  & 0.390 & 0.390 & -  \\
+			Only marriages not preceded by cohabitation  & 0.380 & 0.381 & -  \\
+			Marriages with cohabitation selection & 0.389 & 0.406 & -  \\
 			\hline \\[-1.8ex] 
-		\end{tabular}
-	    \vspace{-0.2cm} 
+		\end{tabular} 
 		\begin{tablenotes}[flushleft]
-			\footnotesize{\item \textsc{Notes}: the table reports the estimates of coefficients $\mu$ obtained from regression
-			\[\Delta \log c_{it}=\alpha+\mu \Delta \log(w_{it})+\nu_{t}+\epsilon_{it}.\]
-		    The sample includes the whole duration of the first relationship of simulated men $i$. The last row is run on a sample of men who decided to cohabit but we imposed them to marry instead. This allow us to analyze the insurance within marriage controlling for selection into a relationship.
-	}
+			\footnotesize{\item \textsc{Notes}: standard errors are clustered at the state level.
+				Coefficients that are significantly different from zero are denoted by the following system: *10\%, **5\%  and ***1\%.}
 		\end{tablenotes}
 	\end{threeparttable}
 \end{table}
 \FloatBarrier
 \endgroup
-\textbf{Consumption smoothing upon divorce/breakup.} Is there a link between partnership types and consumption smoothing upon divorce/breakup? To answer this question we analyze the evolution of log consumption around divorce/breakup using a standard event study on the simulated sample. Note that, after the relationship breakdown, we report the log consumption of the household of the partner that is simulated for her/his whole life-cycle. Specifically, we estimate the following regression model
-\begin{equation}\label{eq:ev_studa2}
-\log(c)_{i,a,t}=\sum_{j=-3}^{3}\beta^{Split}_j\cdot\mathcal{I}(t=j)+\alpha_{0}+\alpha_{a}+\epsilon_{i,a,t},
-\end{equation}
-where $a$ is age of the person observed after the couple chase to exist, $t$ is the year relative to to breakup/divorce ($t=-1$ is omitted) and $i$ is the household. Note that we included age fixed effects. We estimate this model separately for formerly married and cohabiting households under different divorce regimes, following either men or women after the divorce/breakup. Figure \ref{fig:divcons} report the results and shows two main facts. First, consumption drop more after divorce than breakup because the former is costly in terms of assets. Second, women lose more because they are less productive than men, especially if they devoted their time to produce the home good while they were in a couple.
 \section{Welfare}
 Previous research already studied the welfare effects of the introduction of unilateral divorce: both \cite{reynoso2019} and \cite{fernandez2017} find that this policy change decreases welfare for both genders, but more so for women. While we find a similar effect, in this section we claim that accounting for cohabitation results in an even stronger difference by gender.
 To study well-being under the two divorce regimes we perform an \textit{ex-ante} welfare comparison, where for each gender we compute the expected value of spending the whole life cycle under a certain regime, before the realization of productivity and love shocks. Table \ref{table:welf} reports the results, which show that welfare under a unilateral divorce regime is lower than under mutual consent for both genders. The difference is larger for women, which would need to be given almost 13,000\$ in assets in $t=0$ to be indifferent between the two regimes, while men would need only \$3,244 to be indifferent between the two. To understand the role of cohabitation for the changes in well-being, we repeat the welfare analysis assuming that cohabitation in no longer a choice.\footnote{In practice, we increase the stigma parameter towards cohabitation $\gamma$ such that cohabitation is never chosen.} For ease of exposition, we refer to the model with cohabitation as model $A$, while model $B$ is the one without cohabitation. The results in table \ref{table:welf} show that the loss of welfare related to unilateral divorce is similar under models $A$ and $B$ for women, while men lose more under model $B$. This result suggests not accounting for cohabitation overestimates the welfare losses for men when unilateral divorce is introduced. The intuition is that cohabitation is valuable for men under the unilateral divorce regime, because it avoids the risk of losing most of their assets in favor of their ex-wife upon dissolution.
@@ -1031,7 +1019,7 @@ In this section we provide evidence about the evolution of household's net worth
 \begin{equation}\label{eq:ev_studa}
 \text{Net worth}_{i,a,t,y,ma}=\sum_{j=-6}^{4}\beta^{Split}_j\cdot\mathcal{I}(t=j)+\alpha_{0}+\alpha_{a}+\alpha_{y}+\alpha_{ma}+\epsilon_{i,t},
 \end{equation}
-where $a$ is age of the person observed after the couple chase to exist, $t$ is the year relative to divorce/breakup ($t=-1$ is omitted), and $i$ is the household, $y$ is the year and $ma$ is the number of years since the start of the marriage/cohabitation. Note that we included year, years since marriage/cohabitation and age fixed effects.  We estimate this model separately for formerly married and cohabiting households and we further subdivide our sample considering wealthier/poorer households and men/women.\footnote{A household is considered wealthy if its net worth before couple disruption is above the $75^{th}$ percentile of the distribution and poor otherwise.} Figure \ref{fig:assdiv} reports the results. We normalize the coefficient estimates $\beta^{Split}_j$ by adding the average of net worth at divorce $E[\text{Net worth}|t = -1]$. In panel \subref{sf:assdiv1} we can see a decrease in net worth for richer households: the estimates indicate the year after the divorce the household is left with significantly less than half its original net worth, even though the large standard errors do not allow us to identify clearly the amount of net worth lost because of the divorce. Instead, no clear decrease in net worth can be observed for poorer household. Panel \subref{sf:assdiv3} shows that there is not clear loss in net worth for poor and rich cohabiting households. Finally, panels \subref{sf:assdiv2} and \subref{sf:assdiv4} show that no gender-related difference regarding the evolution of net worth can be detected.
+where $a$ is age of the person observed after the couple chase to exist, $t$ if the year relative to switching to unilateral divorce ($t=-1$ is omitted), and $i$ is the household, $y$ is the year and $ma$ is the number of years since the start of the marriage/cohabitation. Note that we included year, years since marriage/cohabitation and age fixed effects.  We estimate this model separately for formerly married and cohabiting households and we further subdivide our sample considering wealthier/poorer households and men/women.\footnote{A household is considered wealthy if its net worth before couple disruption is above the $75^{th}$ percentile of the distribution and poor otherwise.} Figure \ref{fig:assdiv} reports the results. We normalize the coefficient estimates $\beta^{Split}_j$ by adding the average of net worth at divorce $E[\text{Net worth}|t = -1]$. In panel \subref{sf:assdiv1} we can see a decrease in net worth for richer households: the estimates indicate the year after the divorce the household is left with significantly less than half its original net worth, even though the large standard errors do not allow us to identify clearly the amount of net worth lost because of the divorce. Instead, no clear decrease in net worth can be observed for poorer household. Panel \subref{sf:assdiv3} shows that there is not clear loss in net worth for poor and rich cohabiting households. Finally, panels \subref{sf:assdiv2} and \subref{sf:assdiv4} show that no gender-related difference regarding the evolution of net worth can be detected.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1202,127 +1190,23 @@ We adapt the original algorithm such that it can be run in parallel using $M$ no
 \FloatBarrier
 
 \FloatBarrier
-
-\subsubsection*{Relationship Choice - California left out of sample}
-
-%RELATIONSHIP CHOICE
-\begin{table}[H]\centering
-	\caption{\\OLS regression. Observation: first and second relationships. California dropped from initial sample}
-	\label{table:wmar_c}
-	\begin{threeparttable}[t]\centering
-		\input{wmar_c.tex}
-		\begin{tablenotes}[flushleft]
-			\footnotesize{\item \textsc{Notes}: standard errors are clustered at the state level.
-				Coefficients that are significantly different from zero are denoted by the following system: *10\%, **5\%  and ***1\%.}
-		\end{tablenotes}
-	\end{threeparttable}
-\end{table}
-\FloatBarrier
-
-\subsubsection*{Relationship Choice - Heterogeneity by Property regime and California left out of sample}
+\subsubsection*{Relationship Choice - Logit}
 
 %RELATIONSHIP CHOICE
-\begin{table}[H]\centering
-	\caption{\\OLS regression. Observation: first and second relationships. California dropped from initial sample}
-	\label{table:wmarc_c}
+	\begin{table}[H]\centering
+	\caption{\\Logitstic regression. Observation: first and second relationships}
+	\label{table:wmar_logit}
 	\begin{threeparttable}[t]\centering
-		\input{wmarc_c.tex}
-		\begin{tablenotes}[flushleft]
-			\footnotesize{\item \textsc{Notes}: standard errors are clustered at the state level.
-				Coefficients that are significantly different from zero are denoted by the following system: *10\%, **5\%  and ***1\%.}
-		\end{tablenotes}
+	\input{wmar_logit.tex}
+	\begin{tablenotes}[flushleft]
+	\footnotesize{\item \textsc{Notes}: standard errors are clustered at the state level.
+		Coefficients that are significantly different from zero are denoted by the following system: *10\%, **5\%  and ***1\%.}
+	\end{tablenotes}
 	\end{threeparttable}
-\end{table}
+	\end{table}
 \FloatBarrier
 
-
-
-
-
-\subsubsection*{Relationship Choice - Multinomial Logit}
-The
-\begin{table}[H]\centering
-	\caption{\\Multinomial Logit. Observation: person month, the choices are: staying single, marry or cohabit}
-	\label{table:wmar_mlogit}
-	\begin{threeparttable}[t]\centering
-		\input{wmar_mlogit.tex}
-		\begin{tablenotes}[flushleft]
-			\footnotesize{\item \textsc{Notes}: standard errors are clustered at the state level. The numbers displayed in the table are the $exp$ of the coefficient of the multinomial logit and they indicate the relative risk of cohabiting with respect to marrying. When these number are larger than $1$ the regressor of interest is associated with an relative increase in the risk of cohabiting.
-				Relative risks that are significantly different from zero are denoted by the following system: *10\%, **5\%  and ***1\%.}
-		\end{tablenotes}
-	\end{threeparttable}
-\end{table}
-\FloatBarrier
-\subsubsection*{Relationship Choice - Event Study}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Symmetry in income and assets
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
-	\begin{center}
-		\caption{\\Event studies on share of couples choosing marriage instead of cohabitation, around the introduction of unilateral divorce}
-		\label{fig:estud}
-		
-		\begin{subfigure}{.49\textwidth}
-			\centering
-			% include first image
-			\caption{Full sample}
-			\label{fig:ev1}
-			\scalebox{0.5}{\input{event_1.pgf} } 
-		\end{subfigure}
-		\begin{subfigure}{.49\textwidth}
-			\centering
-			% include second image
-			\caption{Resident}
-			\label{fig:ev2}
-			\scalebox{0.5}{\input{event_2.pgf} } 
-		\end{subfigure}
-	\end{center}
-	
-	\hspace{20em}
-	
-	\begin{center}
-		\begin{subfigure}{.49\textwidth}
-			\centering
-			% include second image
-			\caption{NSFH}
-			\label{fig:ev3}
-			\scalebox{0.5}{\input{event_3.pgf} } 
-		\end{subfigure}
-		\begin{subfigure}{.49\textwidth}
-			\centering
-			% include second image
-			\caption{NSFG}
-			\label{fig:ev4}
-			\scalebox{0.5}{\input{event_4.pgf} } 
-		\end{subfigure}
-	\end{center}
-	
-	\begin{minipage}{0.99\textwidth} % choose width suitably
-		{\footnotesize \textsc{Notes.}. \par}
-	\end{minipage}
-\end{figure}
-\FloatBarrier
-
-
-\subsubsection*{Relationship Choice and Children}
-Is there a shift towards cohabitation for both childless couples and couples with children? Using the NSFH sample, in table \ref{table:wmarc_chil} below we shows that unilateral divorce is associated with a shift towards cohabitation both for couples whose respondent has some children, is childless or is childless and does not want to have children. The shift towards cohabitation is lower in absolute value for couples whose respondent has children. This can be due to the fact that marriage remains the best partnership for enhancing cooperation, one desirable feature for couples with children since they require large investments in terms of time and money. This heterogeneity will be captured by our model: couples with a high relationship quality will be less sensible to the changes in the law and are also more likely to produce large quantities of the public good, which also represents children.
-
-%RELATIONSHIP CHOICE
-\begin{table}[H]\centering
-	\caption{\\OLS regression. Observation: first and second relationships.}
-	\label{table:wmarc_chil}
-	\begin{threeparttable}[t]\centering
-		\input{wmar_chil.tex}
-		\begin{tablenotes}[flushleft]
-			\footnotesize{\item \textsc{Notes}: standard errors are clustered at the state level.
-				Coefficients that are significantly different from zero are denoted by the following system: *10\%, **5\%  and ***1\%.}
-		\end{tablenotes}
-	\end{threeparttable}
-\end{table}
-\FloatBarrier
-
-%\newpage
+\newpage
 
 \section{Figures}
 
@@ -1417,6 +1301,20 @@ Is there a shift towards cohabitation for both childless couples and couples wit
 \resizebox{0.8\textwidth}{!}{\input{psidist.pgf}}
 
 \end{figure}
+
+\begin{figure}[h!]
+\centering
+\caption{\\Distribution of women Pareto weight $\theta$---marriage and cohabitation}
+\label{fig:thetadist}
+\hspace*{-1.1cm} 
+\resizebox{0.8\textwidth}{!}{\input{thtdist.pgf}}
+\begin{minipage}{0.99\textwidth} % choose width suitably
+
+\hspace{30em}
+
+{\footnotesize \textsc{Notes.} This figure depicts the distribution women Pareto weight for married and cohabiting couples. The thick solid lines represent the distribution of this variable in the period the couple decides to get together, while the lighter areas depict the distribution of $\theta$ considering every relationship duration.\par}
+\end{minipage}
+\end{figure}
 \FloatBarrier
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Symmetry in income and assets
@@ -1474,7 +1372,7 @@ Is there a shift towards cohabitation for both childless couples and couples wit
 \begin{figure}[ht]
 	\caption{\\ Event studies of log consumption around divorce--simulated data}
 	\label{fig:divcons}
-		
+	
 	
 	\begin{subfigure}{.49\textwidth}
 		\centering
@@ -1498,7 +1396,7 @@ Is there a shift towards cohabitation for both childless couples and couples wit
 		
 		\hspace{50em}
 		
-		{\footnotesize \textsc{Notes.} The figures display the evolution of simulated consumption around divorce or breakup. The displayed patterns are normalized coefficients from event studies around divorce/breakup.)\par}
+		{\footnotesize \textsc{Notes.} The figures display the evolution of net-worth (measured in 1997\$). The displayed patterns are normalized coefficients from event studies around divorce. Rich household are defined as those whose net-worth is above the median in the first period they were observed. Poor households are those whose net-worth is below the $75^{th}$ percentile of the distribution. Net worth is constructed using the same PSID variables that \cite{blundell2016} use.)\par}
 	\end{minipage}
 \end{figure}
 \FloatBarrier
@@ -1508,81 +1406,11 @@ Is there a shift towards cohabitation for both childless couples and couples wit
 	\caption{\\$\%$ of periods $t$ for which $\theta_t\neq \theta_{t+1}$}
 	\vspace*{-0.5cm} 
 	\hspace*{-1.3cm} 
-	\label{fig:thch}
+	\label{fig:psidis}
 	\resizebox{0.8\textwidth}{!}{\input{bartht.pgf}}
-		\hspace{20em}	
-	\begin{minipage}{0.99\textwidth} % choose width suitably
-		{\footnotesize \textsc{Notes.} The figures display the share of consecutive periods where the bargaining power in the couple changes. The abbreviation M.C. means Mutual Consent regime, the abbreviation U.D. stands for Unilateral Divorce regime. The values are computed using the first simulated partnership of individuals who spent their life under the same divorce regime. The asterisk $*$ means that these marriages are obtained by imposing marriage (under unilateral divorce regime) as a partnership to couples that had decided to cohabit.\par}
-	\end{minipage}
-\end{figure}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%
-%Table of risk sharing
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begingroup
-\renewcommand{\arraystretch}{1.3}
-\begin{table}[h]\centering
-	\caption{\\Partnership type and consumption insurance against income shocks}
-	\label{table:riskshf}
-	\begin{threeparttable}[t]\centering
-		\begin{tabular}{@{\extracolsep{15pt}}lccc} 
-			\hline 
-			\hline 
-			& \multicolumn{3}{c}{Married and Cohabiting Women} \\
-			\cline{2-4} 
-			& \multicolumn{2}{c}{Married} & Cohabiting  \\ 
-			\cline{2-3} \cline{4-4} 
-			& M.C. & U.D. &  \\ 
-			\hline 
-			Baseline & 0.201 & 0.164 &  0.329 \\ 
-			Only marriages preceded by cohabitation  & 0.097 & 0.183 & -  \\
-			Only marriages not preceded by cohabitation  & 0.210 & 0.160 & -  \\
-			Marriages with cohabitation selection & 0.329 & 0.331 & -  \\
-			\hline \\[-1.8ex] 
-		\end{tabular}
-		\vspace{-0.2cm} 
-		\begin{tablenotes}[flushleft]
-			\footnotesize{\item \textsc{Notes}: the table reports the estimates of coefficients $\mu$ obtained from regression
-				\[\Delta \log c_{it}=\alpha+\mu \Delta \log(w_{it})+\nu_{t}+\epsilon_{it}.\]
-				The sample includes the whole duration of the first relationship of simulated women $i$. The last row is run on a sample of men who decided to cohabit but we imposed them to marry instead. This allow us to analyze the insurance within marriage controlling for selection into a relationship.
-			}
-		\end{tablenotes}
-	\end{threeparttable}
-\end{table}
-\FloatBarrier
-\endgroup
-
-
-
-
-\begin{figure}[ht]
-	\begin{center}
-		\caption{\\ Newly formed relationships (either married or cohabiting) and unilateral divorce (U.D.)}
-		\label{fig:events_raw}
-		
-		\begin{subfigure}{.49\textwidth}
-			\centering
-			% include second image
-			\caption{{\color{blue}\% new couples choosing marriage instead of cohabitation} and {\color{red}\% relationships born under U.D.} }
-			
-			\label{fig:years_raw}
-			\scalebox{0.5}{\input{years_raw.pgf} } 
-		\end{subfigure}
-		\begin{subfigure}{.49\textwidth}
-			\centering
-			% include first image
-			\caption{\% new couples choosing marriage instead of cohabitation around U.D.}
-			\label{fig:event_raw}
-			\scalebox{0.5}{\input{event_raw.pgf} } 
-		\end{subfigure}
-
-	\end{center}
 	
-
-	\begin{minipage}{0.99\textwidth} % choose width suitably
-		{\footnotesize \textsc{Notes.} The left panel shows in blue the evolution over time of the \% of relationships born in year $t$ such that the couple chose marriage as opposed to informal cohabitation. The red line represents the \% of relationships born in $t$ in a state that already adopted unilateral divorce by year $t$. The right panel shows the \% of relationships where the couple chose to marry instead of cohabiting in an year whose distance in time from the introduction unilateral divorce in that state is equal to $d$ years. The red dotted lines are obtained running linear regressions on a dummy for marriage, using the event time as the only regressor. All the variables presented in this figure are constructed with a sample of first and second relationships (which can be either marriage or cohabitation) from the 1988 wave of the NSFH: we provide further details about the survey and the sample construction in section 3. All the variables depicted in the two figures are constructed using sample weights. \par}
-	\end{minipage}
 \end{figure}
-\FloatBarrier
+
+
+
 \end{document}
