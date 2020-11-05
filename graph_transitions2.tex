@@ -1,19 +1,26 @@
 
 
 \begin{tikzpicture}[domain=0:1,scale=1]
-\node [block, name=input,align=center] (sum) {\large Single};
-\node [block, above right=1.5cm and 7.449cm of sum ] (controller) {\large Separation};
-\node [block, below right=1.5cm and 7.449cm of controller,align=center] (system) {\large Cohabitation};
-\draw [<-,  thick, latex-] (controller) -- node[above left,yshift=0.3cm]{\large }(system);
+\node [ellipse,fill=blue!20,minimum height=2.5cm,minimum width=7.8cm,draw, name=input,align=center] (sum) {\huge\bf Single};
+\node [ellipse,fill=none,minimum height=0.5cm,minimum width=7.8cm, above right=1.5cm and 7.449cm of sum ] (controller) {\\ \huge \bf Breakup};
+\node [ellipse,fill=blue!20,minimum height=2.5cm,minimum width=7.8cm,draw, below right=1.5cm and 7.449cm of controller,align=center] (system) {\huge \bf Cohabitation};
+\draw [decoration={markings,mark=at position -0.95 with
+    {\arrow[scale=5,>=stealth]{<}}},postaction={decorate}] (controller) --  node[above left,yshift=0.3cm]{\huge \bf}(system);
 \node [output, right of=system] (output) {fe};
-\node [block, below left=1.5cm and 7.449cm of system,align=center] (measurements) {\large Marriage };
-\node [block, left of=measurements, node distance=10.05cm,align=left] (divorce) {\large Divorces};
-\draw [<-,  thick, latex-] (sum) -- node[above right,yshift=0.3cm]{\large } (controller);
-\draw [->,  thick, -latex] (sum) -- node[above]{\large} (system);
-\draw [->,  thick, -latex] (system) --node[above left]{\large } (measurements);
-\draw [->,  thick, -latex] (measurements) --node[above]{\large } (divorce);
-\draw [->,  thick, -latex] (sum) --node[above right]{\large } (measurements);
-\draw [->,  thick, -latex] (divorce) --node[right]{\large } (sum);
+\node [ellipse,fill=blue!20,minimum height=2.5cm,minimum width=7.8cm,draw, below left=1.5cm and 7.449cm of system,align=center] (measurements) {\huge \bf {\color{blue!20}a}Marriage };
+\node [ellipse,fill=none,minimum height=1.5cm,minimum width=4.2cm, left of=measurements, node distance=12.98cm,align=left] (divorce) {\huge \bf Divorce};
+\draw [decoration={markings,mark=at position -0.92 with
+    {\arrow[scale=5,>=stealth]{<}}},postaction={decorate}] (sum) -- node[above right,yshift=0.3cm]{\huge \bf } (controller);
+\draw [decoration={markings,mark=at position 1 with
+    {\arrow[scale=5,>=stealth]{>}}},postaction={decorate}] (sum) -- node[above]{\huge\bf} (system);
+\draw [decoration={markings,mark=at position 0.99 with
+    {\arrow[scale=5,>=stealth]{>}}},postaction={decorate}] (system) --node[above left]{\huge\bf } (measurements);
+\draw [decoration={markings,mark=at position 0.99 with
+    {\arrow[scale=5,>=stealth]{>}}},postaction={decorate}] (measurements) --node[above]{\huge\bf } (divorce);
+\draw [decoration={markings,mark=at position 1 with
+    {\arrow[scale=5,>=stealth]{>}}},postaction={decorate}] (sum) --node[above right]{\huge } (measurements);
+\draw [decoration={markings,mark=at position 1 with
+    {\arrow[scale=5,>=stealth]{>}}},postaction={decorate}] (divorce) --node[right]{\huge } (sum);
 node [near end] {$$} (sum);
 \end{tikzpicture}
 
